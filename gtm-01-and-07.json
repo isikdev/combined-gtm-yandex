@@ -1,0 +1,3598 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2023-12-07 05:25:59",
+    "containerVersion": {
+        "path": "accounts/6204352358/containers/170406932/versions/0",
+        "accountId": "6204352358",
+        "containerId": "170406932",
+        "containerVersionId": "0",
+        "container": {
+            "path": "accounts/6204352358/containers/170406932",
+            "accountId": "6204352358",
+            "containerId": "170406932",
+            "name": "базовый",
+            "publicId": "GTM-T9967NCX",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1699348134479",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6204352358/containers/170406932/workspaces?apiLink=container",
+            "features": {
+                "supportUserPermissions": true,
+                "supportEnvironments": true,
+                "supportWorkspaces": true,
+                "supportGtagConfigs": false,
+                "supportBuiltInVariables": true,
+                "supportClients": false,
+                "supportFolders": true,
+                "supportTags": true,
+                "supportTemplates": true,
+                "supportTriggers": true,
+                "supportVariables": true,
+                "supportVersions": true,
+                "supportZones": true,
+                "supportTransformations": false
+            },
+            "tagIds": [
+                "GTM-T9967NCX"
+            ]
+        },
+        "tag": [
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "tagId": "16",
+                "name": "Ecom 09 – Скролл",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script type=\"text/javascript\">\n  if(parseFloat({{Ecom 09 – Price / Scroll}}) > 0) {\n    window.dataLayer = window.dataLayer || [];\n    window.dataLayer.push({\n      ecommerce: {\n        currencyCode: \"RUB\",\n        purchase: {\n          actionField: {\n            id: \"TR-\" + Date.now(),\n            goal_id: parseInt({{Ecom 09 – ID / Scroll}})\n          },\n          products: [{\n            name: \"Scroll {{Scroll Depth Threshold}}\",\n            price: parseFloat({{Ecom 09 – Price / Scroll}}),\n            category: \"Активность на сайте\",\n            quantity: 1\n          }]\n        }\n      }\n    });\n  }\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1699348161973",
+                "firingTriggerId": [
+                    "14"
+                ],
+                "parentFolderId": "15",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "tagId": "21",
+                "name": "Yandex Metrika - Клик по email",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  ym({{ID YM}},'reachGoal','clickEmail');\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1699348161974",
+                "firingTriggerId": [
+                    "17"
+                ],
+                "parentFolderId": "18",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "tagId": "26",
+                "name": "Ecom 03 – Клик по номеру телефона",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script type=\"text/javascript\">\n  if(parseFloat({{Ecom 03 – Price / Клик по номеру телефона}}) > 0) {\n    window.dataLayer = window.dataLayer || [];\n    window.dataLayer.push({\n      ecommerce: {\n        currencyCode: \"RUB\",\n        purchase: {\n          actionField: {\n            id: \"TR-\" + Date.now(),\n            goal_id: parseInt({{Ecom 03 – ID / Клик по номеру телефона}})\n          },\n          products: [{\n            name: \"Клик по номеру телефона\",\n            price: parseFloat({{Ecom 03 – Price / Клик по номеру телефона}}),\n            category: \"Клики\",\n            quantity: 1\n          }]\n        }\n      }\n    });\n  }\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1699348161975",
+                "firingTriggerId": [
+                    "23",
+                    "25",
+                    "10"
+                ],
+                "parentFolderId": "15",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "tagId": "30",
+                "name": "Ecom 04 – Клик по мессенджеру",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script type=\"text/javascript\">\n  if(parseFloat({{Ecom 04 – Price / Клик по мессенджеру}}) > 0) {\n    window.dataLayer = window.dataLayer || [];\n    window.dataLayer.push({\n      ecommerce: {\n        currencyCode: \"RUB\",\n        purchase: {\n          actionField: {\n            id: \"TR-\" + Date.now(),\n            goal_id: parseInt({{Ecom 04 – ID / Клик по мессенджеру}})\n          },\n          products: [{\n            name: \"Клик по мессенджеру\",\n            price: parseFloat({{Ecom 04 – Price / Клик по мессенджеру}}),\n            category: \"Клики\",\n            quantity: 1\n          }]\n        }\n      }\n    });\n  }\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1699348161977",
+                "firingTriggerId": [
+                    "28"
+                ],
+                "parentFolderId": "15",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "tagId": "40",
+                "name": "f Wordpress CF7 / Ecom 11 – Отправка конкретной формы",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script type=\"text/javascript\">\n  if(parseFloat({{f Wordpress CF7 / Ecom 11 – Price – Отправка конкретной формы}}) > 0) {\n    window.dataLayer = window.dataLayer || [];\n    window.dataLayer.push({\n      ecommerce: {\n        currencyCode: \"RUB\",\n        purchase: {\n          actionField: {\n            id: \"TR-\" + Date.now(),\n            goal_id: parseInt({{f Wordpress CF7 / Ecom 11 – ID – Отправка конкретной формы}})\n          },\n          products: [{\n            name: \"{{f Wordpress CF7 – dlv – formId}}\",\n            price: parseFloat({{f Wordpress CF7 / Ecom 11 – Price – Отправка конкретной формы}}),\n            category: \"Отправка конкретной формы\",\n            quantity: 1\n          }]\n        }\n      }\n    });\n  }\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1699348161979",
+                "firingTriggerId": [
+                    "31"
+                ],
+                "parentFolderId": "15",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "tagId": "42",
+                "name": "Yandex Metrika - Клик по номеру телефона",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  ym({{ID YM}},'reachGoal','clickPhone');\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1699348161980",
+                "firingTriggerId": [
+                    "23"
+                ],
+                "parentFolderId": "18",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "tagId": "45",
+                "name": "Yandex Metrika - Копирование email",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  ym({{ID YM}},'reachGoal','copyEmail');\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1699348161980",
+                "firingTriggerId": [
+                    "43",
+                    "44"
+                ],
+                "parentFolderId": "18",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "tagId": "49",
+                "name": "Ecom 05 – Клик по email",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script type=\"text/javascript\">\n  if(parseFloat({{Ecom 05 – Price / Клик по email}}) > 0) {\n    window.dataLayer = window.dataLayer || [];\n    window.dataLayer.push({\n      ecommerce: {\n        currencyCode: \"RUB\",\n        purchase: {\n          actionField: {\n            id: \"TR-\" + Date.now(),\n            goal_id: parseInt({{Ecom 05 – ID / Клик по email}})\n          },\n          products: [{\n            name: \"Клик по email\",\n            price: parseFloat({{Ecom 05 – Price / Клик по email}}),\n            category: \"Клики\",\n            quantity: 1\n          }]\n        }\n      }\n    });\n  }\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1699348161981",
+                "firingTriggerId": [
+                    "17",
+                    "43",
+                    "44"
+                ],
+                "parentFolderId": "15",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "tagId": "53",
+                "name": "f Wordpress CF7 / Ecom 10 – Отправка всех форм",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script type=\"text/javascript\">\n  if(parseFloat({{Ecom 10 – Price – Отправка всех форм}}) > 0) {\n    window.dataLayer = window.dataLayer || [];\n    window.dataLayer.push({\n      ecommerce: {\n        currencyCode: \"RUB\",\n        purchase: {\n          actionField: {\n            id: \"TR-\" + Date.now(),\n            goal_id: parseInt({{Ecom 10 – ID – Отправка всех форм}})\n          },\n          products: [{\n            name: \"{{f Wordpress CF7 – dlv – formId}}\",\n            price: parseFloat({{Ecom 10 – Price – Отправка всех форм}}),\n            category: \"Отправка всех форм\",\n            quantity: 1\n          }]\n        }\n      }\n    });\n  }\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1699348161982",
+                "firingTriggerId": [
+                    "31"
+                ],
+                "parentFolderId": "15",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "tagId": "54",
+                "name": "f Flexbe / Ecom 10 – Отправка всех форм",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script type=\"text/javascript\">\n  if(parseFloat({{Ecom 10 – Price – Отправка всех форм}}) > 0) {\n    window.dataLayer = window.dataLayer || [];\n    window.dataLayer.push({\n      ecommerce: {\n        currencyCode: \"RUB\",\n        purchase: {\n          actionField: {\n            id: \"TR-\" + Date.now(),\n            goal_id: parseInt({{Ecom 10 – ID – Отправка всех форм}})\n          },\n          products: [{\n            name: \"{{f Flexbe – cjs – Formname}}\",\n            price: parseFloat({{Ecom 10 – Price – Отправка всех форм}}),\n            category: \"Отправка всех форм\",\n            quantity: 1\n          }]\n        }\n      }\n    });\n  }\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1699348161983",
+                "firingTriggerId": [
+                    "33"
+                ],
+                "parentFolderId": "15",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "tagId": "59",
+                "name": "Yandex Metrika - Клик по мессенджеру",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  ym({{ID YM}},'reachGoal','clickChat');\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1699348161984",
+                "firingTriggerId": [
+                    "28"
+                ],
+                "parentFolderId": "18",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "tagId": "60",
+                "name": "f Creatium / Ecom 10 – Отправка всех форм",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script type=\"text/javascript\">\n  if(parseFloat({{Ecom 10 – Price – Отправка всех форм}}) > 0) {\n    window.dataLayer = window.dataLayer || [];\n    window.dataLayer.push({\n      ecommerce: {\n        currencyCode: \"RUB\",\n        purchase: {\n          actionField: {\n            id: \"TR-\" + Date.now(),\n            goal_id: parseInt({{Ecom 10 – ID – Отправка всех форм}})\n          },\n          products: [{\n            name: \"{{f Creatium – dlv – formname}}\",\n            price: parseFloat({{Ecom 10 – Price – Отправка всех форм}}),\n            category: \"Отправка всех форм\",\n            quantity: 1\n          }]\n        }\n      }\n    });\n  }\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1699348161985",
+                "firingTriggerId": [
+                    "55"
+                ],
+                "parentFolderId": "15",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "tagId": "62",
+                "name": "f Creatium / HTML – Form Listener",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\ncr.api(function (page) {\n    page.waitForAppear('.cr-form', function (el) {\n        page.getComponent(el).on('submit', function (event) {\n            form = page.getComponent(el);\n            window.dataLayer = window.dataLayer || [];\n\t\t\twindow.dataLayer.push ({\n              'event': 'formSuccess',\n              'formname': form.name\n            });\n        });\n    });\n});\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1699348161985",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "parentFolderId": "6",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "tagId": "69",
+                "name": "f Tilda / Ecom 10 – Отправка всех форм",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script type=\"text/javascript\">\n  if(parseFloat({{Ecom 10 – Price – Отправка всех форм}}) > 0) {\n    window.dataLayer = window.dataLayer || [];\n    window.dataLayer.push({\n      ecommerce: {\n        currencyCode: \"RUB\",\n        purchase: {\n          actionField: {\n            id: \"TR-\" + Date.now(),\n            goal_id: parseInt({{Ecom 10 – ID – Отправка всех форм}})\n          },\n          products: [{\n            name: \"{{Event}}\",\n            price: parseFloat({{Ecom 10 – Price – Отправка всех форм}}),\n            category: \"Отправка всех форм\",\n            quantity: 1\n          }]\n        }\n      }\n    });\n  }\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1699348161987",
+                "firingTriggerId": [
+                    "68"
+                ],
+                "parentFolderId": "15",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "tagId": "71",
+                "name": "f Flexbe / Ecom 11 – Отправка конкретной формы",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script type=\"text/javascript\">\n  if(parseFloat({{f Flexbe / Ecom 11 – Price – Отправка конкретной формы}}) > 0) {\n    window.dataLayer = window.dataLayer || [];\n    window.dataLayer.push({\n      ecommerce: {\n        currencyCode: \"RUB\",\n        purchase: {\n          actionField: {\n            id: \"TR-\" + Date.now(),\n            goal_id: parseInt({{f Flexbe / Ecom 11 – ID – Отправка конкретной формы}})\n          },\n          products: [{\n            name: \"{{f Flexbe – cjs – Formname}}\",\n            price: parseFloat({{f Flexbe / Ecom 11 – Price – Отправка конкретной формы}}),\n            category: \"Отправка конкретной формы\",\n            quantity: 1\n          }]\n        }\n      }\n    });\n  }\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1699348161987",
+                "firingTriggerId": [
+                    "70"
+                ],
+                "parentFolderId": "15",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "tagId": "74",
+                "name": "Yandex Metrika - Отправка формы Rsya",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  ym({{ID YM}},'reachGoal','Rsya1234567890');\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1699348161988",
+                "firingTriggerId": [
+                    "73"
+                ],
+                "parentFolderId": "18",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "tagId": "79",
+                "name": "f Creatium / Ecom 11 – Отправка конкретной формы",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script type=\"text/javascript\">\n  if(parseFloat({{f Creatium / Ecom 11 – Price – Отправка конкретной формы}}) > 0) {\n    window.dataLayer = window.dataLayer || [];\n    window.dataLayer.push({\n      ecommerce: {\n        currencyCode: \"RUB\",\n        purchase: {\n          actionField: {\n            id: \"TR-\" + Date.now(),\n            goal_id: parseInt({{f Tilda / Ecom 11 – ID – Отправка конкретной формы}})\n          },\n          products: [{\n            name: \"{{f Creatium – dlv – formname}}\",\n            price: parseFloat({{f Creatium / Ecom 11 – Price – Отправка конкретной формы}}),\n            category: \"Отправка конкретной формы\",\n            quantity: 1\n          }]\n        }\n      }\n    });\n  }\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1699348161989",
+                "firingTriggerId": [
+                    "55"
+                ],
+                "parentFolderId": "15",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "tagId": "82",
+                "name": "Ecom 02 – Посещение страницы Спасибо",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script type=\"text/javascript\">\n  if(parseFloat({{Ecom 02 – Price / Посещение страницы Спасибо}}) > 0) {\n    window.dataLayer = window.dataLayer || [];\n    window.dataLayer.push({\n      ecommerce: {\n        currencyCode: \"RUB\",\n        purchase: {\n          actionField: {\n            id: \"TR-\" + Date.now(),\n            goal_id: parseInt({{Ecom 02 – ID / Посещение страницы Спасибо}})\n          },\n          products: [{\n            name: \"Посещение страницы Спасибо\",\n            price: parseFloat({{Ecom 02 – Price / Посещение страницы Спасибо}}),\n            category: \"Посещение страницы\",\n            quantity: 1\n          }]\n        }\n      }\n    });\n  }\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1699348162054",
+                "firingTriggerId": [
+                    "61"
+                ],
+                "parentFolderId": "15",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "tagId": "84",
+                "name": "f Tilda / Ecom 11 – Отправка конкретной формы",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script type=\"text/javascript\">\n  if(parseFloat({{f Tilda / Ecom 11 – Price – Отправка конкретной формы}}) > 0) {\n    window.dataLayer = window.dataLayer || [];\n    window.dataLayer.push({\n      ecommerce: {\n        currencyCode: \"RUB\",\n        purchase: {\n          actionField: {\n            id: \"TR-\" + Date.now(),\n            goal_id: parseInt({{f Tilda / Ecom 11 – ID – Отправка конкретной формы}})\n          },\n          products: [{\n            name: \"{{Event}}\",\n            price: parseFloat({{f Tilda / Ecom 11 – Price – Отправка конкретной формы}}),\n            category: \"Отправка конкретной формы\",\n            quantity: 1\n          }]\n        }\n      }\n    });\n  }\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1699348162055",
+                "firingTriggerId": [
+                    "68"
+                ],
+                "parentFolderId": "15",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "tagId": "85",
+                "name": "Yandex Metrika",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<!-- Yandex.Metrika counter -->\n<script type=\"text/javascript\" >\n   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};\n   m[i].l=1*new Date();\n   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}\n   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})\n   (window, document, \"script\", \"https://mc.yandex.ru/metrika/tag.js\", \"ym\");\n\n   ym({{ID YM}}, \"init\", {\n        clickmap:true,\n        trackLinks:true,\n        accurateTrackBounce:true,\n        webvisor:true,\n        ecommerce:\"dataLayer\"\n   });\n</script>\n<noscript><div><img src=\"https://mc.yandex.ru/watch/{{ID YM}}\" style=\"position:absolute; left:-9999px;\" alt=\"\" /></div></noscript>\n<!-- /Yandex.Metrika counter -->"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1699348162055",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "tagId": "87",
+                "name": "f Wordpress CF7 / HTML – Form Listener",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\ndocument.addEventListener( 'wpcf7mailsent', function( event ) {\n window.dataLayer.push({\n \"event\" : \"cf7submission\",\n \"formId\" : event.detail.contactFormId,\n \"response\" : event.detail.inputs\n })\n}); \n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1699348162056",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "parentFolderId": "6",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "tagId": "92",
+                "name": "Yandex Metrika - Отправка формы Poisk",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  ym({{ID YM}},'reachGoal','Poisk1234567890');\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1699348162057",
+                "firingTriggerId": [
+                    "91"
+                ],
+                "parentFolderId": "18",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "tagId": "96",
+                "name": "Ecom 01 – Посещение главной",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script type=\"text/javascript\">\n  if(parseFloat({{Ecom 01 – Price / Посещение главной}}) > 0) {\n    window.dataLayer = window.dataLayer || [];\n    window.dataLayer.push({\n      ecommerce: {\n        currencyCode: \"RUB\",\n        purchase: {\n          actionField: {\n            id: \"TR-\" + Date.now(),\n            goal_id: parseInt({{Ecom 01 – ID / Посещение главной}})\n          },\n          products: [{\n            name: \"Посещение главной страницы\",\n            price: parseFloat({{Ecom 01 – Price / Посещение главной}}),\n            category: \"Посещение страницы\",\n            quantity: 1\n          }]\n        }\n      }\n    });\n  }\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1699348162058",
+                "firingTriggerId": [
+                    "50"
+                ],
+                "parentFolderId": "15",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "tagId": "97",
+                "name": "Yandex Metrika - Копирование телефона",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  ym({{ID YM}},'reachGoal','copyPhone');\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1699348162058",
+                "firingTriggerId": [
+                    "25",
+                    "10"
+                ],
+                "parentFolderId": "18",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "tagId": "100",
+                "name": "Ecom 08 – 60sec",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script type=\"text/javascript\">\n  if(parseFloat({{Ecom 08 – Price / 60sec}}) > 0) {\n    window.dataLayer = window.dataLayer || [];\n    window.dataLayer.push({\n      ecommerce: {\n        currencyCode: \"RUB\",\n        purchase: {\n          actionField: {\n            id: \"TR-\" + Date.now(),\n            goal_id: parseInt({{Ecom 08 – ID / 60sec}})\n          },\n          products: [{\n            name: \"{{Event}}\",\n            price: parseFloat({{Ecom 08 – Price / 60sec}}),\n            category: \"Активность на сайте\",\n            quantity: 1\n          }]\n        }\n      }\n    });\n  }\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1699348162059",
+                "firingTriggerId": [
+                    "58"
+                ],
+                "parentFolderId": "15",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "tagId": "102",
+                "name": "Yandex Metrika - 60sec",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\nvar settings = {\n    /* Настройки которые надо менять */\n    need: 30, // Сюда вписываем через какое количество секунд повторно отправлять цель, по умолчанию стоит 60, но можно указать и 30\n    checkTime: 10, // секунды. период проверки. \n    //желательно, чтобы need было кратно checkTime\n\tIDmetrika: {{ID YM}}, // Сюда вписываем ИД Счетчика Яндекс Метрики\n\tcode_gtm: true, //Скрипт вставляете с помощью GTM пишем True, если вставляете напрямую на сайт пишем False (в данном случае и Google Analytics требуется вставлять напрямую на сайт)\n\t// При False в настройках Tilda счетчика UA не забудьте \"Включить gtag.js\"\n\t/* Настройки которые надо менять */\n}\n \n/* \n## Инструкция по добавлению целей в Яндекс.Метрику ##\nЕсли вы указываете в функции NEED шаг в 30 секунд, то в Метрике вы можете отслеживать цели с шагом в 30 секунд и цели событий добавляйте такие:\n30sec\n60sec\n90sec\n120sec\n150sec и т.д.\n \nЕсли вы указываете в функции NEED шаг в 60 секунд, то в Метрике вы можете отслеживать цели с шагом в 30 секунд и цели событий добавляйте такие:\n60sec\n120sec\n180sec\n240sec и т.д.\n*/\n\n/* БОЛЬШЕ В КОДЕ НИЧЕГО НЕ ТРОГАЕМ, ЦЕЛИ ТОЖЕ НЕ ПРАВИМ */\nfunction gtag(){dataLayer.push(arguments);}\n\nvar metricsFn = function () {\n    if({{debug}}>0) console.log(ActiveScore.timer);\n    if({{debug}}>0) console.log(ActiveScore.need);\n    var c1 = this.getCookie(this.cookieName);\n    if({{debug}}>0) console.log(c1);\n    if (ActiveScore.timer >= ActiveScore.need) {\n        if({{debug}}>0) console.log(\"событие отправилось\");\n        /* Тут перечислять все что нужно будет вызвать по достижению цели */\n        ym(settings.IDmetrika, \"reachGoal\", this.cookieName.slice(0, -3));\n\t\t\n\tif (settings.code_gtm == true) {\n\t\tdataLayer.push({'event': this.cookieName.slice(0, -3)});\n\t} else {\n\t\tgtag('event', 'Timer', {'event_category' : 'Page Timer', 'event_action' : this.cookieName.slice(0, -3)});\n\t}\n\t\t\n        /* Тут перечислять все что нужно будет вызвать по достижению цели */\n    }\n};\n\nvar ActiveScore = {\n    need: settings.need,\n    checkTime: settings.checkTime,\n    loop: true,\n    counter: 0,\n    cookieName: \"60sec_ap\",\n    sendFn: null,\n    parts: 0,\n    active_parts: 0,\n    timer: 0,\n    events: [\n        \"touchmove\",\n        \"blur\",\n        \"focus\",\n        \"focusin\",\n        \"focusout\",\n        \"load\",\n        \"resize\",\n        \"scroll\",\n        \"unload\",\n        \"click\",\n        \"dblclick\",\n        \"mousedown\",\n        \"mouseup\",\n        \"mousemove\",\n        \"mouseover\",\n        \"mouseout\",\n        \"mouseenter\",\n        \"mouseleave\",\n        \"change\",\n        \"select\",\n        \"submit\",\n        \"keydown\",\n        \"keypress\",\n        \"keyup\",\n        \"error\",\n    ],\n\n    setEvents: function () {\n        for (var index = 0; index < this.events.length; index++) {\n            var eName = this.events[index];\n            window.addEventListener(eName, function (e) {\n                if (e.isTrusted && ActiveScore.period.events == false) {\n                    ActiveScore.period.events = true;\n                }\n            });\n        }\n    },\n\n    period: {\n        start: 0,\n        end: 0,\n        events: false,\n    },\n\n    init: function (fn) {\n        this.calcParts();\n        this.setEvents();\n        this.setStartCounter();\n        if (this.checkCookie()) {\n            this.sendFn = fn;\n            this.start();\n        }\n    },\n\n    readLastCookie: function () {\n        var absurdlyLarge = 100000;\n        for (var i = 1; i < absurdlyLarge; i++) {\n            var cookie = this.getCookie(i * this.need + 'sec_ap');\n            if (cookie != this.parts * this.parts) return { i: i, cookie: cookie };\n        }\n        return { i: 1, cookie: 0 };\n    },\n\n    setStartCounter: function () {\n        var lastCookie = this.readLastCookie();\n        this.counter = lastCookie.i - 1;\n        this.active_parts = Number(lastCookie.cookie);\n        this.cookieName = (this.counter + 1) * this.need + \"sec_ap\";\n    },\n\n    calcParts: function () {\n        this.parts = Math.ceil(this.need / this.checkTime);\n    },\n\n    setPeriod: function () {\n        this.period.start = this.microtime();\n        this.period.end = this.period.start + this.checkTime;\n        this.period.events = false;\n    },\n\n    microtime: function () {\n        var now = new Date().getTime() / 1000;\n        var s = parseInt(now);\n        return s;\n    },\n\n    start: function () {\n        this.setPeriod();\n        this.runPeriod();\n    },\n\n    timeoutId: null,\n\n    checkPeriod: function () {\n        if (this.period.events == true) {\n            this.active_parts = this.active_parts + 1;\n            // console.log('В этой секции были действия');\n        } else {\n            // console.log('В этой секции НЕБЫЛО действия');\n        }\n        this.timer = this.active_parts * this.checkTime;\n        if({{debug}}>0) console.log(\n            this.active_parts + \" / \" + this.parts + \" [\" + this.timer + \"]\"\n        );\n\n        if (this.checkSecs()) {\n        } else {\n            this.start();\n        }\n        this.setCookie(this.cookieName, this.active_parts);\n    },\n\n    checkSecs: function () {\n        if (this.timer >= this.need) {\n            this.send();\n            if (this.loop == true) {\n                this.counter++;\n                this.timer = 0;\n                this.active_parts = 0;\n                this.cookieName = (this.counter + 1) * this.need + \"sec_ap\";\n                return false;\n            } else {\n                // console.log('Завершили проверку активности');\n                return true;\n            }\n        }\n        return false;\n    },\n\n    timeoutFn: function () {\n        ActiveScore.checkPeriod();\n    },\n\n    runPeriod: function () {\n        this.timeoutId = setTimeout(this.timeoutFn, this.checkTime * 1000);\n    },\n\n    send: function () {\n        if (this.getCookie(this.cookieName) == this.parts * this.parts) {\n            this.setStartCounter();\n        } else {\n            this.setCookie(this.cookieName, this.active_parts * this.active_parts);\n        }\n        this.sendFn();\n    },\n\n    checkCookie: function () {\n        var c = this.getCookie(this.cookieName);\n        if (c == null) {\n            return true;\n        } else {\n            if (c == '') return true;\n            c = parseInt(c);\n            if (c >= this.parts) {\n                // console.log('Скрипт даже не запустился...');\n                if (this.loop == true) {\n                    return true;\n                }\n                return false;\n            } else {\n                this.active_parts = c;\n                return true;\n            }\n        }\n    },\n\n    setCookie: function (name, value, days) {\n        var expires = \"\";\n        if (days) {\n            var date = new Date();\n            date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);\n            expires = \"; expires=\" + date.toUTCString();\n        }\n        document.cookie = name + \"=\" + (value || \"\") + expires + \"; path=/\";\n    },\n    getCookie: function (name) {\n        var nameEQ = name + \"=\";\n        var ca = document.cookie.split(\";\");\n        for (var i = 0; i < ca.length; i++) {\n            var c = ca[i];\n            while (c.charAt(0) == \" \") c = c.substring(1, c.length);\n            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);\n        }\n        return null;\n    },\n    eraseCookie: function (name) {\n        document.cookie =\n            name + \"=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;\";\n    },\n};\n\nActiveScore.init(metricsFn);\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1699348162059",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "parentFolderId": "18",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "tagId": "103",
+                "name": "Yandex Metrika - Скролл",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  ym({{ID YM}},'reachGoal','scroll{{Scroll Depth Threshold}}');\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1699348162060",
+                "firingTriggerId": [
+                    "14"
+                ],
+                "parentFolderId": "18",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "tagId": "105",
+                "name": "Ecom 06 – Клик по соцсетям",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script type=\"text/javascript\">\n  if(parseFloat({{Ecom 06 – Price / Клик по соцсетям}}) > 0) {\n    window.dataLayer = window.dataLayer || [];\n    window.dataLayer.push({\n      ecommerce: {\n        currencyCode: \"RUB\",\n        purchase: {\n          actionField: {\n            id: \"TR-\" + Date.now(),\n            goal_id: parseInt({{Ecom 06 – ID / Клик по соцсетям}})\n          },\n          products: [{\n            name: \"Клик по соцсетям\",\n            price: parseFloat({{Ecom 06 – Price / Клик по соцсетям}}),\n            category: \"Клики\",\n            quantity: 1\n          }]\n        }\n      }\n    });\n  }\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1699348162060",
+                "firingTriggerId": [
+                    "66"
+                ],
+                "parentFolderId": "15",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "tagId": "106",
+                "name": "HTML - Email / Phone Copy Listener",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\nvar c = document.getElementsByTagName(\"a\");\nfor(var i = 0; i < c.length; i++) {\n    if((typeof(c[i]) !== undefined) && (c[i].href.indexOf('mailto') !== -1)) {\n        c[i].addEventListener('copy', function(evt) {\n            dataLayer.push({\n            'event': 'copyText', \n            'copy-class' : evt.target.className,\n            'copy-email' : evt.target.getAttribute(\"href\")\n            });\n        });\n        c[i].addEventListener('contextmenu', function(evt) {\n            dataLayer.push({\n            'event': 'rightClick', \n            'copy-class' : evt.target.className,\n            'copy-email' : evt.target.getAttribute(\"href\")\n            });\n        });\n    }\n  \n    if((typeof(c[i]) !== undefined) && (c[i].href.indexOf('tel') !== -1)) {\n        c[i].addEventListener('copy', function(evt) {\n            dataLayer.push({\n            'event': 'copyTextPhone', \n            'copy-class' : evt.target.className,\n            'copy-phone' : evt.target.getAttribute(\"href\")\n            });\n        });\n        c[i].addEventListener('contextmenu', function(evt) {\n            dataLayer.push({\n            'event': 'rightClickPhone', \n            'copy-class' : evt.target.className,\n            'copy-phone' : evt.target.getAttribute(\"href\")\n            });\n            if({{debug}}) console.log(evt);\n        });\n    }\n}\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1699348162060",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "tagId": "107",
+                "name": "Ecom 07 – Клик по кнопке / URL",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script type=\"text/javascript\">\n  if(parseFloat({{Ecom 07 – Price / Клик по кнопке}}) > 0) {\n    window.dataLayer = window.dataLayer || [];\n    window.dataLayer.push({\n      ecommerce: {\n        currencyCode: \"RUB\",\n        purchase: {\n          actionField: {\n            id: \"TR-\" + Date.now(),\n            goal_id: parseInt({{Ecom 07 – ID / Клик по кнопке}})\n          },\n          products: [{\n            name: \"Клик по кнопке\",\n            price: parseFloat({{Ecom 07 – Price / Клик по кнопке}}),\n            category: \"Клики\",\n            quantity: 1\n          }]\n        }\n      }\n    });\n  }\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1699348162061",
+                "firingTriggerId": [
+                    "67",
+                    "32",
+                    "88",
+                    "72"
+                ],
+                "parentFolderId": "15",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "tagId": "109",
+                "name": "Yandex Metrika - Отправка формы",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  ym({{ID YM}},'reachGoal','{{goal_name}}');\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1699348162061",
+                "firingTriggerId": [
+                    "68",
+                    "70",
+                    "55",
+                    "31"
+                ],
+                "parentFolderId": "18",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "triggerId": "8",
+                "name": "f Flexbe – order_done Rsya",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "order_done"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{f Flexbe – cjs – Formname}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "Rsya"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1699348161971",
+                "parentFolderId": "6"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "triggerId": "10",
+                "name": "Копирование телефона – Правая кнопка",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "rightClickPhone"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "rightClickPhone"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1699348161971",
+                "parentFolderId": "3"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "triggerId": "14",
+                "name": "Скролл",
+                "type": "SCROLL_DEPTH",
+                "fingerprint": "1699348161972",
+                "parentFolderId": "3",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "verticalThresholdUnits",
+                        "value": "PERCENT"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "verticalThresholdsPercent",
+                        "value": "10, 25, 50, 75, 90"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "verticalThresholdOn",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "triggerStartOption",
+                        "value": "WINDOW_LOAD"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "horizontalThresholdOn",
+                        "value": "false"
+                    }
+                ]
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "triggerId": "17",
+                "name": "Клик по email",
+                "type": "LINK_CLICK",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "mailto:"
+                            }
+                        ]
+                    }
+                ],
+                "waitForTags": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "checkValidation": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "waitForTagsTimeout": {
+                    "type": "TEMPLATE",
+                    "value": "2000"
+                },
+                "uniqueTriggerId": {
+                    "type": "TEMPLATE"
+                },
+                "fingerprint": "1699348161973",
+                "parentFolderId": "3"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "triggerId": "23",
+                "name": "Клик по номеру телефона",
+                "type": "LINK_CLICK",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "tel:"
+                            }
+                        ]
+                    }
+                ],
+                "waitForTags": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "checkValidation": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "waitForTagsTimeout": {
+                    "type": "TEMPLATE",
+                    "value": "2000"
+                },
+                "uniqueTriggerId": {
+                    "type": "TEMPLATE"
+                },
+                "fingerprint": "1699348161975",
+                "parentFolderId": "3"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "triggerId": "25",
+                "name": "Копирование телефона – Клавиши",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "copyTextPhone"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "copyTextPhone"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1699348161975",
+                "parentFolderId": "3"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "triggerId": "28",
+                "name": "Клик по мессенджеру",
+                "type": "LINK_CLICK",
+                "filter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "\\/\\/yandex\\.ru\\/chat\\/|m\\.me|messenger\\.com|www\\.messenger\\.com|skype|t\\.me|tg:\\/\\/|telegram\\.me|tlgg\\.ru|tele\\.click|viber:\\/\\/|partners\\.viber\\.com\\/|wa\\.me|api\\.whatsapp\\.com|web\\.whatsapp\\.com|whatsapp:\\/\\/|vk\\.me|vk\\.com\\/im|vk:\\/\\/"
+                            }
+                        ]
+                    }
+                ],
+                "waitForTags": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "checkValidation": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "waitForTagsTimeout": {
+                    "type": "TEMPLATE",
+                    "value": "2000"
+                },
+                "uniqueTriggerId": {
+                    "type": "TEMPLATE"
+                },
+                "fingerprint": "1699348161976",
+                "parentFolderId": "3"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "triggerId": "31",
+                "name": "f Wordpress CF7 – cf7submission",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "cf7submission"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1699348161977",
+                "parentFolderId": "6"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "triggerId": "32",
+                "name": "Клик по кнопке / Class",
+                "type": "LINK_CLICK",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click Classes}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "super-button"
+                            }
+                        ]
+                    }
+                ],
+                "waitForTags": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "checkValidation": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "waitForTagsTimeout": {
+                    "type": "TEMPLATE",
+                    "value": "2000"
+                },
+                "uniqueTriggerId": {
+                    "type": "TEMPLATE"
+                },
+                "fingerprint": "1699348161977",
+                "parentFolderId": "19"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "triggerId": "33",
+                "name": "f Flexbe – order_done все кроме Rsya и Poisk",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "order_done"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{f Flexbe – cjs – Formname}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "Rsya"
+                            },
+                            {
+                                "type": "BOOLEAN",
+                                "key": "negate",
+                                "value": "true"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{f Flexbe – cjs – Formname}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "Poisk"
+                            },
+                            {
+                                "type": "BOOLEAN",
+                                "key": "negate",
+                                "value": "true"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1699348161977",
+                "parentFolderId": "6"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "triggerId": "35",
+                "name": "f Creatium – Отправка конкретной формы",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "formSuccess"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{f Creatium – dlv – formname}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "Консультация"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1699348161978",
+                "parentFolderId": "6"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "triggerId": "43",
+                "name": "Копирование почты – Клавиши",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "copyText"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "copyText"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1699348161980",
+                "parentFolderId": "3"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "triggerId": "44",
+                "name": "Копирование почты – Правая кнопка",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "rightClick"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "rightClick"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1699348161980",
+                "parentFolderId": "3"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "triggerId": "50",
+                "name": "Pageview - Главная страница",
+                "type": "PAGEVIEW",
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Page Path}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "/"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1699348161982",
+                "parentFolderId": "19"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "triggerId": "55",
+                "name": "f Creatium – formSuccess",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "formSuccess"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1699348161983",
+                "parentFolderId": "6"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "triggerId": "58",
+                "name": "60sec – Все отсечки по 30 секунд",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "sec$"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1699348161984",
+                "parentFolderId": "3"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "triggerId": "61",
+                "name": "Pageview - Страница спасибо",
+                "type": "PAGEVIEW",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Page Path}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "thankyou"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1699348161985",
+                "parentFolderId": "19"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "triggerId": "63",
+                "name": "Scroll Depth 5",
+                "type": "SCROLL_DEPTH",
+                "fingerprint": "1699348161985",
+                "parentFolderId": "3",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "verticalThresholdUnits",
+                        "value": "PERCENT"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "verticalThresholdsPercent",
+                        "value": "5"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "verticalThresholdOn",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "triggerStartOption",
+                        "value": "WINDOW_LOAD"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "horizontalThresholdOn",
+                        "value": "false"
+                    }
+                ]
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "triggerId": "66",
+                "name": "Клик по соцсетям",
+                "type": "LINK_CLICK",
+                "filter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "vk\\.com|facebook\\.com|twitter\\.com|ok\\.ru|odnoklassniki\\.ru|livejournal|plus\\.google\\.com|my\\.mail\\.ru|linkedin\\.com|delicious|tumblr\\.com|instagram\\.com|pinterest\\.com|reddit|stumbleupon"
+                            }
+                        ]
+                    }
+                ],
+                "waitForTags": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "checkValidation": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "waitForTagsTimeout": {
+                    "type": "TEMPLATE",
+                    "value": "2000"
+                },
+                "uniqueTriggerId": {
+                    "type": "TEMPLATE"
+                },
+                "fingerprint": "1699348161986",
+                "parentFolderId": "3"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "triggerId": "67",
+                "name": "Клик по кнопке / URL",
+                "type": "LINK_CLICK",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "services"
+                            }
+                        ]
+                    }
+                ],
+                "waitForTags": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "checkValidation": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "waitForTagsTimeout": {
+                    "type": "TEMPLATE",
+                    "value": "2000"
+                },
+                "uniqueTriggerId": {
+                    "type": "TEMPLATE"
+                },
+                "fingerprint": "1699348161986",
+                "parentFolderId": "19"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "triggerId": "68",
+                "name": "f Tilda – submit_form",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "submit_form"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1699348161987",
+                "parentFolderId": "6"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "triggerId": "70",
+                "name": "f Flexbe – order_done",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "order_done"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1699348161987",
+                "parentFolderId": "6"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "triggerId": "72",
+                "name": "Клик по кнопке / Text",
+                "type": "LINK_CLICK",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click Text}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "Прайс"
+                            }
+                        ]
+                    }
+                ],
+                "waitForTags": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "checkValidation": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "waitForTagsTimeout": {
+                    "type": "TEMPLATE",
+                    "value": "2000"
+                },
+                "uniqueTriggerId": {
+                    "type": "TEMPLATE"
+                },
+                "fingerprint": "1699348161988",
+                "parentFolderId": "19"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "triggerId": "73",
+                "name": "Отправка формы",
+                "type": "FORM_SUBMISSION",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Form ID}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "Rsya"
+                            }
+                        ]
+                    }
+                ],
+                "waitForTags": {
+                    "type": "TEMPLATE"
+                },
+                "checkValidation": {
+                    "type": "TEMPLATE"
+                },
+                "waitForTagsTimeout": {
+                    "type": "TEMPLATE",
+                    "value": "2000"
+                },
+                "uniqueTriggerId": {
+                    "type": "TEMPLATE"
+                },
+                "fingerprint": "1699348161988"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "triggerId": "75",
+                "name": "f Tilda – Отправка конкретной формы",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "submit_form000000000"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1699348161988",
+                "parentFolderId": "6"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "triggerId": "88",
+                "name": "Клик по кнопке / ID",
+                "type": "LINK_CLICK",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click ID}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "super-more"
+                            }
+                        ]
+                    }
+                ],
+                "waitForTags": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "checkValidation": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "waitForTagsTimeout": {
+                    "type": "TEMPLATE",
+                    "value": "2000"
+                },
+                "uniqueTriggerId": {
+                    "type": "TEMPLATE"
+                },
+                "fingerprint": "1699348162056",
+                "parentFolderId": "19"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "triggerId": "90",
+                "name": "f Flexbe – Отправка конкретной формы",
+                "type": "ELEMENT_VISIBILITY",
+                "fingerprint": "1699348162056",
+                "parentFolderId": "6",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useOnScreenDuration",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useDomChangeListener",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "elementSelector",
+                        "value": ".modal-done81198"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "firingFrequency",
+                        "value": "ONCE"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "selectorType",
+                        "value": "CSS"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "onScreenRatio",
+                        "value": "50"
+                    }
+                ]
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "triggerId": "91",
+                "name": "Отправка формы poisk",
+                "type": "FORM_SUBMISSION",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Form ID}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "Poisk"
+                            }
+                        ]
+                    }
+                ],
+                "waitForTags": {
+                    "type": "TEMPLATE"
+                },
+                "checkValidation": {
+                    "type": "TEMPLATE"
+                },
+                "waitForTagsTimeout": {
+                    "type": "TEMPLATE",
+                    "value": "2000"
+                },
+                "uniqueTriggerId": {
+                    "type": "TEMPLATE"
+                },
+                "fingerprint": "1699348162057"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "triggerId": "98",
+                "name": "Scroll Depth 50",
+                "type": "SCROLL_DEPTH",
+                "fingerprint": "1699348162058",
+                "parentFolderId": "3",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "verticalThresholdUnits",
+                        "value": "PERCENT"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "verticalThresholdsPercent",
+                        "value": "50"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "verticalThresholdOn",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "triggerStartOption",
+                        "value": "WINDOW_LOAD"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "horizontalThresholdOn",
+                        "value": "false"
+                    }
+                ]
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "triggerId": "108",
+                "name": "f Flexbe – order_done Poisk",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "order_done"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{f Flexbe – cjs – Formname}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "Poisk"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1699348162061",
+                "parentFolderId": "6"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "4",
+                "name": "copyPhone",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "copy-phone"
+                    }
+                ],
+                "fingerprint": "1699348161970",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "5",
+                "name": "copyEmail",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "copy-email"
+                    }
+                ],
+                "fingerprint": "1699348161970",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "7",
+                "name": "f Flexbe – cjs – Formname",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n var e = {{Click Element}};\n \tvar closestClassText = e.closest('.component-form');\n    console.log(closestClassText.querySelector('.form-info input[name=\"name\"]'));\n\treturn closestClassText.querySelector('.form-info input[name=\"name\"]').value;\t\n}"
+                    }
+                ],
+                "fingerprint": "1699348161970",
+                "parentFolderId": "6",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "12",
+                "name": "Ecom 09 – ID / Scroll",
+                "type": "smm",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "input",
+                        "value": "{{Scroll Depth Threshold}}"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "map",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "10"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "000000000"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "25"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "000000000"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "50"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "000000000"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "75"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "000000000"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "90"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "000000000"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1699348161972",
+                "parentFolderId": "11",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "13",
+                "name": "Ecom 09 – Price / Scroll",
+                "type": "smm",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "input",
+                        "value": "{{Scroll Depth Threshold}}"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "map",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "10"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "0"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "25"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "0"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "50"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "0"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "75"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "0"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "90"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "0"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1699348161972",
+                "parentFolderId": "11",
+                "formatValue": {
+                    "convertNullToValue": {
+                        "type": "TEMPLATE",
+                        "value": "0"
+                    }
+                }
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "20",
+                "name": "ID YM",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "00000000"
+                    }
+                ],
+                "fingerprint": "1699348161974",
+                "parentFolderId": "19",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "22",
+                "name": "Ecom 03 – ID / Клик по номеру телефона",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "000000000"
+                    }
+                ],
+                "fingerprint": "1699348161974",
+                "parentFolderId": "11",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "24",
+                "name": "Ecom 03 – Price / Клик по номеру телефона",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "0"
+                    }
+                ],
+                "fingerprint": "1699348161975",
+                "parentFolderId": "11",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "27",
+                "name": "Ecom 04 – Price / Клик по мессенджеру",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "0"
+                    }
+                ],
+                "fingerprint": "1699348161976",
+                "parentFolderId": "11",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "29",
+                "name": "Ecom 04 – ID / Клик по мессенджеру",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "000000000"
+                    }
+                ],
+                "fingerprint": "1699348161976",
+                "parentFolderId": "11",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "34",
+                "name": "f Creatium – dlv – formname",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "formname"
+                    }
+                ],
+                "fingerprint": "1699348161978",
+                "parentFolderId": "6",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "37",
+                "name": "f Wordpress CF7 – dlv – formId",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "formId"
+                    }
+                ],
+                "fingerprint": "1699348161978",
+                "parentFolderId": "6",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "38",
+                "name": "f Wordpress CF7 / Ecom 11 – ID – Отправка конкретной формы",
+                "type": "smm",
+                "notes": "Идентификатор формы из плагина Contact Form 7.",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "input",
+                        "value": "{{f Wordpress CF7 – dlv – formId}}"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "map",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "000"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "000000000"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "000"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "000000000"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1699348161979",
+                "parentFolderId": "36",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "39",
+                "name": "f Wordpress CF7 / Ecom 11 – Price – Отправка конкретной формы",
+                "type": "smm",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "input",
+                        "value": "{{f Wordpress CF7 – dlv – formId}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "defaultValue",
+                        "value": "0"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "map",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "000"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "0"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1699348161979",
+                "parentFolderId": "36",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "46",
+                "name": "goal_name",
+                "type": "c",
+                "notes": "Название РЦ, срабатывает всегда.",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "leadForm"
+                    }
+                ],
+                "fingerprint": "1699348161981",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "47",
+                "name": "Ecom 05 – Price / Клик по email",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "0"
+                    }
+                ],
+                "fingerprint": "1699348161981",
+                "parentFolderId": "11",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "48",
+                "name": "Ecom 05 – ID / Клик по email",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "000000000"
+                    }
+                ],
+                "fingerprint": "1699348161981",
+                "parentFolderId": "11",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "51",
+                "name": "Ecom 10 – ID – Отправка всех форм",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "000000000"
+                    }
+                ],
+                "fingerprint": "1699348161982",
+                "parentFolderId": "11",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "52",
+                "name": "Ecom 10 – Price – Отправка всех форм",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "1.7"
+                    }
+                ],
+                "fingerprint": "1701926325763",
+                "parentFolderId": "11",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "56",
+                "name": "Ecom 06 – Price / Клик по соцсетям",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "0"
+                    }
+                ],
+                "fingerprint": "1699348161983",
+                "parentFolderId": "11",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "57",
+                "name": "Ecom 08 – ID / 60sec",
+                "type": "smm",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "input",
+                        "value": "{{Event}}"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "map",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "30sec"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "000000000"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "60sec"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "000000000"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "90sec"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "000000000"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1699348161983",
+                "parentFolderId": "11",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "64",
+                "name": "f Flexbe / Ecom 11 – ID – Отправка конкретной формы",
+                "type": "smm",
+                "notes": "Задаем в настройках формы название формы и копируем их сюда по строкам.",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "input",
+                        "value": "{{f Flexbe – cjs – Formname}}"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "map",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "Форма 1"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "000000000"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "Форма 2"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "000000000"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1699348161985",
+                "parentFolderId": "41",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "65",
+                "name": "f Flexbe / Ecom 11 – Price – Отправка конкретной формы",
+                "type": "smm",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "input",
+                        "value": "{{f Flexbe – cjs – Formname}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "defaultValue",
+                        "value": "0"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "map",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "Форма 1"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "0"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "Форма 2"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "0"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1699348161986",
+                "parentFolderId": "41",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "77",
+                "name": "f Creatium / Ecom 11 – Price – Отправка конкретной формы",
+                "type": "smm",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "input",
+                        "value": "{{f Creatium – dlv – formname}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "defaultValue",
+                        "value": "0"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "map",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "Форма 1"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "0"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "Форма 2"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "0"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1699348161989",
+                "parentFolderId": "76",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "78",
+                "name": "f Tilda / Ecom 11 – ID – Отправка конкретной формы",
+                "type": "smm",
+                "notes": "Для получения всех форм на странице Тильды, можно в консоли запустить код:\n\n\nvar elements = document.getElementsByTagName('form');\n\nfor (var i = 0; i < elements.length; i++) {\n    console.log(\"submit_\" + elements[i].id);\n}",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "input",
+                        "value": "{{Event}}"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "map",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "submit_form000000000"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "000000000"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "submit_form000000000"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "000000000"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1699348161989",
+                "parentFolderId": "9",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "80",
+                "name": "Ecom 02 – ID / Посещение страницы Спасибо",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "000000000"
+                    }
+                ],
+                "fingerprint": "1699348162054",
+                "parentFolderId": "11",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "81",
+                "name": "Ecom 02 – Price / Посещение страницы Спасибо",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "0"
+                    }
+                ],
+                "fingerprint": "1699348162054",
+                "parentFolderId": "11",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "83",
+                "name": "f Tilda / Ecom 11 – Price – Отправка конкретной формы",
+                "type": "smm",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "input",
+                        "value": "{{Event}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "defaultValue",
+                        "value": "0"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "map",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "submit_form000000000"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "0"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1699348162055",
+                "parentFolderId": "9",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "86",
+                "name": "Ecom 07 – Price / Клик по кнопке",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "0"
+                    }
+                ],
+                "fingerprint": "1699348162055",
+                "parentFolderId": "11",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "89",
+                "name": "f Creatium / Ecom 11 – ID – Отправка конкретной формы",
+                "type": "smm",
+                "notes": "Каждой форме задаем имя и копируем эти названия в каждой строке.",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "input",
+                        "value": "{{f Creatium – dlv – formname}}"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "map",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "Форма 1"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "000000000"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "Форма 2"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "000000000"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1699348162056",
+                "parentFolderId": "76",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "93",
+                "name": "Ecom 01 – Price / Посещение главной",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "0"
+                    }
+                ],
+                "fingerprint": "1699348162057",
+                "parentFolderId": "11",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "94",
+                "name": "debug",
+                "type": "c",
+                "notes": "Режим отладки:\n1 - посылает сообщения в консоль\n0 – не посылает",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "0"
+                    }
+                ],
+                "fingerprint": "1699348162057",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "95",
+                "name": "Ecom 01 – ID / Посещение главной",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "000000000"
+                    }
+                ],
+                "fingerprint": "1699348162058",
+                "parentFolderId": "11",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "99",
+                "name": "Ecom 08 – Price / 60sec",
+                "type": "smm",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "input",
+                        "value": "{{Event}}"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "map",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "30sec"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "0"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "60sec"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "0.1"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "90sec"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "0"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1701926313287",
+                "parentFolderId": "11",
+                "formatValue": {
+                    "convertNullToValue": {
+                        "type": "TEMPLATE",
+                        "value": "0"
+                    }
+                }
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "101",
+                "name": "Ecom 07 – ID / Клик по кнопке",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "000000000"
+                    }
+                ],
+                "fingerprint": "1699348162059",
+                "parentFolderId": "11",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "variableId": "104",
+                "name": "Ecom 06 – ID / Клик по соцсетям",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "000000000"
+                    }
+                ],
+                "fingerprint": "1699348162060",
+                "parentFolderId": "11",
+                "formatValue": {}
+            }
+        ],
+        "folder": [
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "folderId": "3",
+                "name": "Основная папка",
+                "fingerprint": "1699348161969"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "folderId": "6",
+                "name": "Обработка форм",
+                "fingerprint": "1699348161970"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "folderId": "9",
+                "name": "Ecom – Настройки / Tilda",
+                "fingerprint": "1699348161971"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "folderId": "11",
+                "name": "Ecom – Настройки",
+                "fingerprint": "1699348161971"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "folderId": "15",
+                "name": "Yandex Metrika – Ecom JS–цели",
+                "fingerprint": "1699348161973"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "folderId": "18",
+                "name": "Yandex Metrika – Обычные JS–цели",
+                "fingerprint": "1699348161973"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "folderId": "19",
+                "name": "! Настройки",
+                "fingerprint": "1699348161974"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "folderId": "36",
+                "name": "Ecom – Настройки / Wordpress CF7",
+                "fingerprint": "1699348161978"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "folderId": "41",
+                "name": "Ecom – Настройки / Flexbe",
+                "fingerprint": "1699348161979"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "folderId": "76",
+                "name": "Ecom – Настройки / Creatium",
+                "fingerprint": "1699348161988"
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "type": "REFERRER",
+                "name": "Referrer"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "type": "EVENT",
+                "name": "Event"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "type": "CLICK_ELEMENT",
+                "name": "Click Element"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "type": "CLICK_CLASSES",
+                "name": "Click Classes"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "type": "CLICK_ID",
+                "name": "Click ID"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "type": "CLICK_URL",
+                "name": "Click URL"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "type": "CLICK_TEXT",
+                "name": "Click Text"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "type": "FORM_ID",
+                "name": "Form ID"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "type": "NEW_HISTORY_FRAGMENT",
+                "name": "New History Fragment"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "type": "OLD_HISTORY_FRAGMENT",
+                "name": "Old History Fragment"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "type": "NEW_HISTORY_STATE",
+                "name": "New History State"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "type": "OLD_HISTORY_STATE",
+                "name": "Old History State"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "type": "HISTORY_SOURCE",
+                "name": "History Source"
+            },
+            {
+                "accountId": "6204352358",
+                "containerId": "170406932",
+                "type": "SCROLL_DEPTH_THRESHOLD",
+                "name": "Scroll Depth Threshold"
+            }
+        ],
+        "fingerprint": "1701926759329",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6204352358/containers/170406932/versions/0?apiLink=version"
+    }
+}

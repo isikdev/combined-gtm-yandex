@@ -1,0 +1,2516 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2023-04-11 10:12:46",
+    "containerVersion": {
+        "path": "accounts/6083769437/containers/108385406/versions/0",
+        "accountId": "6083769437",
+        "containerId": "108385406",
+        "containerVersionId": "0",
+        "container": {
+            "path": "accounts/6083769437/containers/108385406",
+            "accountId": "6083769437",
+            "containerId": "108385406",
+            "name": "3. Flexbe (Every N)",
+            "publicId": "GTM-T3CH368",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1681030789449",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6083769437/containers/108385406/workspaces?apiLink=container",
+            "features": {
+                "supportUserPermissions": true,
+                "supportEnvironments": true,
+                "supportWorkspaces": true,
+                "supportGtagConfigs": false,
+                "supportBuiltInVariables": true,
+                "supportClients": false,
+                "supportFolders": true,
+                "supportTags": true,
+                "supportTemplates": true,
+                "supportTriggers": true,
+                "supportVariables": true,
+                "supportVersions": true,
+                "supportZones": true
+            },
+            "tagIds": [
+                "GTM-T3CH368"
+            ]
+        },
+        "tag": [
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "tagId": "6",
+                "name": "Log State Plus",
+                "type": "img",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useCacheBuster",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "url",
+                        "value": "{{Log State App}}?a=1&d={{Page Hostname}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "cacheBusterQueryParam",
+                        "value": "gtmcb"
+                    }
+                ],
+                "fingerprint": "1681030811806",
+                "firingTriggerId": [
+                    "5"
+                ],
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "tagId": "13",
+                "name": "HTML - RPLC - INN",
+                "type": "html",
+                "notes": "Действие: подмена всех упоминаний ИНН.",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  var inn = '{{RPLC – ИНН}}';\n\n  function imain() {\n    if (inn == '-1') { return -1; }\n    \n  \tif (inn == '0') {\n\t  var ck_i = getCookieValue('ck_i');\n\t  if (ck_i == '') {\n\t    inn = genn(10);\n\t    document.cookie = 'ck_i=' + inn + '; max-age=' + 60*60*24*60;\n\t  } else {\n\t    inn = ck_i;\n\t  }\n\t}\n\t\n\tfnr(innregex, 'ИНН '+ inn);\n  }\n  \n  imain();\n\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1681030811893",
+                "firingTriggerId": [
+                    "10"
+                ],
+                "parentFolderId": "7",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "tagId": "20",
+                "name": "HTML - Email / Phone Copy Listener",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\nvar c = document.getElementsByTagName(\"a\");\nfor(var i = 0; i < c.length; i++) {\n    if((typeof(c[i]) !== undefined) && (c[i].href.indexOf('mailto') !== -1)) {\n        c[i].addEventListener('copy', function(evt) {\n            dataLayer.push({\n            'event': 'copyText', \n            'copy-class' : evt.target.className,\n            'copy-email' : evt.target.getAttribute(\"href\")\n            });\n        });\n        c[i].addEventListener('contextmenu', function(evt) {\n            dataLayer.push({\n            'event': 'rightClick', \n            'copy-class' : evt.target.className,\n            'copy-email' : evt.target.getAttribute(\"href\")\n            });\n        });\n    }\n  \n    if((typeof(c[i]) !== undefined) && (c[i].href.indexOf('tel') !== -1)) {\n        c[i].addEventListener('copy', function(evt) {\n            dataLayer.push({\n            'event': 'copyTextPhone', \n            'copy-class' : evt.target.className,\n            'copy-phone' : evt.target.getAttribute(\"href\")\n            });\n        });\n        c[i].addEventListener('contextmenu', function(evt) {\n            dataLayer.push({\n            'event': 'rightClickPhone', \n            'copy-class' : evt.target.className,\n            'copy-phone' : evt.target.getAttribute(\"href\")\n            });\n            if({{debug}}) console.log(evt);\n        });\n    }\n}\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1681030811893",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "tagId": "35",
+                "name": "Offline Conversions – Save",
+                "type": "img",
+                "notes": "Сохранение все Client ID, совершивших основную конверсию.",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useCacheBuster",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "url",
+                        "value": "https://script.google.com/macros/s/AKfycbzkZe5oeVev9qCpL6JlBZkF0vbwYElFZOuG_jZe__bTm4NfvJQEeiMEthsdOxgjIIca/exec?sheet_key=1dUqw3hgDbnLH78R4cnpKkTjEUxCIceYi3-wqyjI8sZQ&client_ids={{Client ID}}&order_status={{status}}&metrika_id={{ID YM}}&utm_source={{sbjs.get.current.src}}&utm_medium={{sbjs.get.current.mdm}}&utm_campaign={{sbjs.get.current.cmp}}&utm_content={{sbjs.get.current.cnt}}&utm_term={{sbjs.get.current.trm}}&url={{Page URL}}&ref={{sbjs.get.current_add.rf}}&esp={{event_state processed}}&ess={{event_state step}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "cacheBusterQueryParam",
+                        "value": "gtmcb"
+                    }
+                ],
+                "fingerprint": "1681030811814",
+                "firingTriggerId": [
+                    "5"
+                ],
+                "parentFolderId": "22",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "tagId": "38",
+                "name": "HTML - RPLC - Lib",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n//var pregex = /^((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$/g;\nvar pregex = /^([+]?[0-9\\s-\\(\\)]{3,25})*$/ig;\nvar eregex = /^(([^<>()[\\]\\\\.,;:\\s@\"]+(\\.[^<>()[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))/g;\nvar innregex = /(ИНН).*?(\\d+)/ig;\nvar ogrnregex = /(ОГРН).*?(\\d+)/ig;\n  \n  \n\n\nfunction getCookieValue(cname) {\n  var name = cname + \"=\";\n  var decodedCookie = decodeURIComponent(document.cookie);\n  var ca = decodedCookie.split(';');\n  for(var i = 0; i <ca.length; i++) {\n    var c = ca[i];\n    while (c.charAt(0) == ' ') {\n      c = c.substring(1);\n    }\n    if (c.indexOf(name) == 0) {\n      return c.substring(name.length, c.length);\n    }\n  }\n  return \"\";\n}\n\nfunction fnr(rgx, rplc) {\n  var nodes = document.evaluate(\".//*[not(self::script or self::style)]/text()\", document, null, XPathResult.ANY_TYPE, null);\n  var thisNode = nodes.iterateNext();\n  var elements = [];\n  var affected_elements = [];\n\n  while (thisNode) {\n    elements.push(thisNode);\n    thisNode = nodes.iterateNext();\n  }\n\n  for(var i = 0; i <elements.length; i++) {\n    var element = elements[i];\n    var text = element.textContent;\n    var res = rgx.exec(text);\n    if (res != null && text.trim() != '') {\n      element.textContent = element.textContent.replace(rgx, rplc);\n      affected_elements.push(thisNode);\n    }\n  }\n\n  return affected_elements;\n}\n  \nfunction genn(lngth) {\n  return Math.floor(Math.pow(10, lngth-1) + Math.random() * 9 * Math.pow(10, lngth-1)).toString();\n}\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1681030811894",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "parentFolderId": "7",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "tagId": "43",
+                "name": "HTML - 60sec",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\nvar settings = {\n    /* Настройки которые надо менять */\n    need: 30, // Сюда вписываем через какое количество секунд повторно отправлять цель, по умолчанию стоит 60, но можно указать и 30\n    checkTime: 10, // секунды. период проверки. \n    //желательно, чтобы need было кратно checkTime\n\tIDmetrika: {{ID YM}}, // Сюда вписываем ИД Счетчика Яндекс Метрики\n\tcode_gtm: true, //Скрипт вставляете с помощью GTM пишем True, если вставляете напрямую на сайт пишем False (в данном случае и Google Analytics требуется вставлять напрямую на сайт)\n\t// При False в настройках Tilda счетчика UA не забудьте \"Включить gtag.js\"\n\t/* Настройки которые надо менять */\n}\n \n/* \n## Инструкция по добавлению целей в Яндекс.Метрику ##\nЕсли вы указываете в функции NEED шаг в 30 секунд, то в Метрике вы можете отслеживать цели с шагом в 30 секунд и цели событий добавляйте такие:\n30sec\n60sec\n90sec\n120sec\n150sec и т.д.\n \nЕсли вы указываете в функции NEED шаг в 60 секунд, то в Метрике вы можете отслеживать цели с шагом в 30 секунд и цели событий добавляйте такие:\n60sec\n120sec\n180sec\n240sec и т.д.\n*/\n\n/* БОЛЬШЕ В КОДЕ НИЧЕГО НЕ ТРОГАЕМ, ЦЕЛИ ТОЖЕ НЕ ПРАВИМ */\nfunction gtag(){dataLayer.push(arguments);}\n\nvar metricsFn = function () {\n    var c1 = this.getCookie(this.cookieName);\n    if (ActiveScore.timer >= ActiveScore.need) {\n        /* Тут перечислять все что нужно будет вызвать по достижению цели */\n        ym(settings.IDmetrika, \"reachGoal\", this.cookieName.slice(0, -3));\n\t\t\n\tif (settings.code_gtm == true) {\n\t\tdataLayer.push({'event': this.cookieName.slice(0, -3)});\n\t}\n\t\t\n        /* Тут перечислять все что нужно будет вызвать по достижению цели */\n    }\n};\n\nvar ActiveScore = {\n    need: settings.need,\n    checkTime: settings.checkTime,\n    loop: true,\n    counter: 0,\n    cookieName: \"60sec_ap\",\n    sendFn: null,\n    parts: 0,\n    active_parts: 0,\n    timer: 0,\n    events: [\n        \"touchmove\",\n        \"blur\",\n        \"focus\",\n        \"focusin\",\n        \"focusout\",\n        \"load\",\n        \"resize\",\n        \"scroll\",\n        \"unload\",\n        \"click\",\n        \"dblclick\",\n        \"mousedown\",\n        \"mouseup\",\n        \"mousemove\",\n        \"mouseover\",\n        \"mouseout\",\n        \"mouseenter\",\n        \"mouseleave\",\n        \"change\",\n        \"select\",\n        \"submit\",\n        \"keydown\",\n        \"keypress\",\n        \"keyup\",\n        \"error\",\n    ],\n\n    setEvents: function () {\n        for (var index = 0; index < this.events.length; index++) {\n            var eName = this.events[index];\n            window.addEventListener(eName, function (e) {\n                if (e.isTrusted && ActiveScore.period.events == false) {\n                    ActiveScore.period.events = true;\n                }\n            });\n        }\n    },\n\n    period: {\n        start: 0,\n        end: 0,\n        events: false,\n    },\n\n    init: function (fn) {\n        this.calcParts();\n        this.setEvents();\n        this.setStartCounter();\n        if (this.checkCookie()) {\n            this.sendFn = fn;\n            this.start();\n        }\n    },\n\n    readLastCookie: function () {\n        var absurdlyLarge = 100000;\n        for (var i = 1; i < absurdlyLarge; i++) {\n            var cookie = this.getCookie(i * this.need + 'sec_ap');\n            if (cookie != this.parts * this.parts) return { i: i, cookie: cookie };\n        }\n        return { i: 1, cookie: 0 };\n    },\n\n    setStartCounter: function () {\n        var lastCookie = this.readLastCookie();\n        this.counter = lastCookie.i - 1;\n        this.active_parts = Number(lastCookie.cookie);\n        this.cookieName = (this.counter + 1) * this.need + \"sec_ap\";\n    },\n\n    calcParts: function () {\n        this.parts = Math.ceil(this.need / this.checkTime);\n    },\n\n    setPeriod: function () {\n        this.period.start = this.microtime();\n        this.period.end = this.period.start + this.checkTime;\n        this.period.events = false;\n    },\n\n    microtime: function () {\n        var now = new Date().getTime() / 1000;\n        var s = parseInt(now);\n        return s;\n    },\n\n    start: function () {\n        this.setPeriod();\n        this.runPeriod();\n    },\n\n    timeoutId: null,\n\n    checkPeriod: function () {\n        if (this.period.events == true) {\n            this.active_parts = this.active_parts + 1;\n            // console.log('В этой секции были действия');\n        } else {\n            // console.log('В этой секции НЕБЫЛО действия');\n        }\n        this.timer = this.active_parts * this.checkTime;\n\n        if (this.checkSecs()) {\n        } else {\n            this.start();\n        }\n        this.setCookie(this.cookieName, this.active_parts);\n    },\n\n    checkSecs: function () {\n        if (this.timer >= this.need) {\n            this.send();\n            if (this.loop == true) {\n                this.counter++;\n                this.timer = 0;\n                this.active_parts = 0;\n                this.cookieName = (this.counter + 1) * this.need + \"sec_ap\";\n                return false;\n            } else {\n                // console.log('Завершили проверку активности');\n                return true;\n            }\n        }\n        return false;\n    },\n\n    timeoutFn: function () {\n        ActiveScore.checkPeriod();\n    },\n\n    runPeriod: function () {\n        this.timeoutId = setTimeout(this.timeoutFn, this.checkTime * 1000);\n    },\n\n    send: function () {\n        if (this.getCookie(this.cookieName) == this.parts * this.parts) {\n            this.setStartCounter();\n        } else {\n            this.setCookie(this.cookieName, this.active_parts * this.active_parts);\n        }\n        this.sendFn();\n    },\n\n    checkCookie: function () {\n        var c = this.getCookie(this.cookieName);\n        if (c == null) {\n            return true;\n        } else {\n            if (c == '') return true;\n            c = parseInt(c);\n            if (c >= this.parts) {\n                // console.log('Скрипт даже не запустился...');\n                if (this.loop == true) {\n                    return true;\n                }\n                return false;\n            } else {\n                this.active_parts = c;\n                return true;\n            }\n        }\n    },\n\n    setCookie: function (name, value, days) {\n        var expires = \"\";\n        if (days) {\n            var date = new Date();\n            date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);\n            expires = \"; expires=\" + date.toUTCString();\n        }\n        document.cookie = name + \"=\" + (value || \"\") + expires + \"; path=/\";\n    },\n    getCookie: function (name) {\n        var nameEQ = name + \"=\";\n        var ca = document.cookie.split(\";\");\n        for (var i = 0; i < ca.length; i++) {\n            var c = ca[i];\n            while (c.charAt(0) == \" \") c = c.substring(1, c.length);\n            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);\n        }\n        return null;\n    },\n    eraseCookie: function (name) {\n        document.cookie =\n            name + \"=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;\";\n    },\n};\n\nActiveScore.init(metricsFn);\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1681030811894",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "tagId": "52",
+                "name": "Телеграм - Клик по email",
+                "type": "img",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useCacheBuster",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "url",
+                        "value": "https://script.google.com/macros/s/{{ID ULA App}}/exec?bid={{ID ULA Lead Bot}}&type=email&click_phone={{Click Text}}{{title_st}}&current_page={{Page Hostname}}{{Page Path}}&utm_source={{sbjs.get.current.src}}&utm_medium={{sbjs.get.current.mdm}}&utm_campaign={{sbjs.get.current.cmp}}&utm_content={{sbjs.get.current.cnt}}&utm_term={{sbjs.get.current.trm}}&udata_vst={{sbjs.get.udata.vst}}&utm_first={{sbjs.get.first.src}}-{{sbjs.get.first.mdm}}&first_date={{sbjs.get.current_add.fd}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "cacheBusterQueryParam",
+                        "value": "gtmcb"
+                    }
+                ],
+                "fingerprint": "1681030811818",
+                "firingTriggerId": [
+                    "44"
+                ],
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "tagId": "56",
+                "name": "Телеграм - Копирование телефона",
+                "type": "img",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useCacheBuster",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "url",
+                        "value": "https://script.google.com/macros/s/{{ID ULA App}}/exec?bid={{ID ULA Lead Bot}}&type=copyphone&click_phone={{copyPhone}}&current_page={{Page Hostname}}{{Page Path}}&utm_source={{sbjs.get.current.src}}&utm_medium={{sbjs.get.current.mdm}}&utm_campaign={{sbjs.get.current.cmp}}&utm_content={{sbjs.get.current.cnt}}&utm_term={{sbjs.get.current.trm}}&udata_vst={{sbjs.get.udata.vst}}&utm_first={{sbjs.get.first.src}}-{{sbjs.get.first.mdm}}&first_date={{sbjs.get.current_add.fd}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "cacheBusterQueryParam",
+                        "value": "gtmcb"
+                    }
+                ],
+                "fingerprint": "1681030811819",
+                "firingTriggerId": [
+                    "55",
+                    "54"
+                ],
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "tagId": "59",
+                "name": "Телеграм - Копирование email",
+                "type": "img",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useCacheBuster",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "url",
+                        "value": "https://script.google.com/macros/s/{{ID ULA App}}/exec?bid={{ID ULA Lead Bot}}&type=copyemail&click_phone={{copyEmail}}&current_page={{Page Hostname}}{{Page Path}}&utm_source={{sbjs.get.current.src}}&utm_medium={{sbjs.get.current.mdm}}&utm_campaign={{sbjs.get.current.cmp}}&utm_content={{sbjs.get.current.cnt}}&utm_term={{sbjs.get.current.trm}}&udata_vst={{sbjs.get.udata.vst}}&utm_first={{sbjs.get.first.src}}-{{sbjs.get.first.mdm}}&first_date={{sbjs.get.current_add.fd}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "cacheBusterQueryParam",
+                        "value": "gtmcb"
+                    }
+                ],
+                "fingerprint": "1681030811886",
+                "firingTriggerId": [
+                    "57",
+                    "58"
+                ],
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "tagId": "60",
+                "name": "Yandex Metrika - Копирование телефона",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  ym({{ID YM}},'reachGoal','copyPhone');\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1681030811894",
+                "firingTriggerId": [
+                    "55",
+                    "54"
+                ],
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "tagId": "62",
+                "name": "Yandex Metrika – Скролл 75",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  ym({{ID YM}},'reachGoal','scroll75');\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1681030811894",
+                "firingTriggerId": [
+                    "41"
+                ],
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "tagId": "64",
+                "name": "Телеграм - Клик по номеру телефона",
+                "type": "img",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useCacheBuster",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "url",
+                        "value": "https://script.google.com/macros/s/{{ID ULA App}}/exec?bid={{ID ULA Lead Bot}}&type=phone&click_phone={{Click Text}}{{title_st}}&current_page={{Page Hostname}}{{Page Path}}&utm_source={{sbjs.get.current.src}}&utm_medium={{sbjs.get.current.mdm}}&utm_campaign={{sbjs.get.current.cmp}}&utm_content={{sbjs.get.current.cnt}}&utm_term={{sbjs.get.current.trm}}&udata_vst={{sbjs.get.udata.vst}}&utm_first={{sbjs.get.first.src}}-{{sbjs.get.first.mdm}}&first_date={{sbjs.get.current_add.fd}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "cacheBusterQueryParam",
+                        "value": "gtmcb"
+                    }
+                ],
+                "fingerprint": "1681030811887",
+                "firingTriggerId": [
+                    "63"
+                ],
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "tagId": "66",
+                "name": "Yandex Metrika - Отправка формы 2",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  if ({{event_state processed}} == 0 || {{F000 - YM Debug Cookie}}==1) {\n    ym({{ID YM}},'reachGoal','{{goal_name2}}');\n    if({{debug}}) console.log('reachGoal '+' {{goal_name2}}');\n  }\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1681030811895",
+                "firingTriggerId": [
+                    "5"
+                ],
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "tagId": "67",
+                "name": "Yandex Metrika - Копирование email",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  ym({{ID YM}},'reachGoal','copyEmail');\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1681030811895",
+                "firingTriggerId": [
+                    "57",
+                    "58"
+                ],
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "tagId": "70",
+                "name": "Yandex Metrika - Клик по мессенджеру",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  ym({{ID YM}},'reachGoal','clickChat');\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1681030811895",
+                "firingTriggerId": [
+                    "69"
+                ],
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "tagId": "73",
+                "name": "Yandex Metrika - Виртуальные страницы",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  ym({{ID YM}}, 'hit', '{{eventAction}}', {\n    title: '{{title}}',\n    referer: '{{referer}}'\n});\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1681030811895",
+                "firingTriggerId": [
+                    "61"
+                ],
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "tagId": "75",
+                "name": "Телеграм - Отправка формы",
+                "type": "img",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useCacheBuster",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "url",
+                        "value": "https://script.google.com/macros/s/{{ID ULA App}}/exec?bid={{ID ULA Lead Bot}}&type=form&click_phone={{title}}{{title_st}}{{title_logst}}&current_page={{Page Hostname}}{{Page Path}}&utm_source={{sbjs.get.current.src}}&utm_medium={{sbjs.get.current.mdm}}&utm_campaign={{sbjs.get.current.cmp}}&utm_content={{sbjs.get.current.cnt}}&utm_term={{sbjs.get.current.trm}}&udata_vst={{sbjs.get.udata.vst}}&utm_first={{sbjs.get.first.src}}-{{sbjs.get.first.mdm}}&first_date={{sbjs.get.current_add.fd}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "cacheBusterQueryParam",
+                        "value": "gtmcb"
+                    }
+                ],
+                "fingerprint": "1681030811890",
+                "firingTriggerId": [
+                    "5"
+                ],
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "tagId": "77",
+                "name": "Log State",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  \n(function getIpAddress() {\n  fetch('{{Log State App}}?d={{Page Hostname}}')\n    .then(function(response) {\n      return response.text();\n    })\n    .then(function(state) {\n      window.dataLayer = window.dataLayer || [];\n      window.dataLayer.push({\n        event: 'Log State',\n        event_state: state\n      });\n    });\n})();\n  \n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1681203835379",
+                "firingTriggerId": [
+                    "2147479553",
+                    "95"
+                ],
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "tagId": "80",
+                "name": "HTML - RPLC - Phone",
+                "type": "html",
+                "notes": "Действие: подмена всех телефонных номеров.",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\nvar pcode = '{{RPLC – Код города}}';\nvar pnum = '{{RPLC – Номер телефона}}';\nvar pmode = '0';\n  \n  function pmain() {\n    if (pnum == '-1') { return -1; }\n\n    if (pnum == '0') {\n      var ck_pnum = getCookieValue('ck_pnum');\n\n      if (ck_pnum == '') {\n        pnum = genn(7);\n        document.cookie = 'ck_pnum=' + pnum + '; max-age=' + 60*60*24*60;\n      } else {\n        pnum = ck_pnum;\n      }\n\n    }\n\n    var new_pnum = '+7 (' + pcode + ') ' + pnum.substr(0,3) +  '-' + pnum.substr(3,2) +  '-' + pnum.substr(5,2);\n\n    fnr(pregex, new_pnum);\n\n    var tels = document.querySelectorAll('a[href^=\"tel:\"]');\n    for (i = 0; i < tels.length; ++i) {\n      tels[i].href = 'tel:+7' + pcode + pnum;\n    }\n  }\n\n  pmain();\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1681030811896",
+                "firingTriggerId": [
+                    "10"
+                ],
+                "parentFolderId": "7",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "tagId": "81",
+                "name": "Yandex Metrika - Клик по email",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  ym({{ID YM}},'reachGoal','clickEmail');\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1681030811896",
+                "firingTriggerId": [
+                    "44"
+                ],
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "tagId": "85",
+                "name": "Yandex Metrika - Отправка формы",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  ym({{ID YM}},'reachGoal','{{goal_name}}');\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1681030811896",
+                "firingTriggerId": [
+                    "5"
+                ],
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "tagId": "87",
+                "name": "HTML - RPLC - OGRN",
+                "type": "html",
+                "notes": "Действие: подмена всех упоминаний ОГРН.",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  var ogrn = '{{RPLC – ОГРН}}';\n\n  function omain() {\n  \tif (ogrn == '-1') { return -1; }\n\tif (ogrn == '0') {\n\t\n\t  var ck_o = getCookieValue('ck_o');\n\t\n\t  if (ck_o == '') {\n\t    ogrn = genn(13);\n\t    document.cookie = 'ck_o=' + ogrn + '; max-age=' + 60*60*24*60;\n\t  } else {\n\t    ogrn = ck_o;\n\t  }\n\t\n\t}\n\t\n\tfnr(ogrnregex, 'ОГРН '+ ogrn);\n  }\n  \n  omain();\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1681030811897",
+                "firingTriggerId": [
+                    "10"
+                ],
+                "parentFolderId": "7",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "tagId": "88",
+                "name": "Yandex Metrika",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<!-- Yandex.Metrika counter -->\n<script type=\"text/javascript\" >\n   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};\n   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})\n   (window, document, \"script\", \"https://mc.yandex.ru/metrika/tag.js\", \"ym\");\n\n   ym({{ID YM}}, \"init\", {\n        clickmap:true,\n        trackLinks:true,\n        accurateTrackBounce:true,\n        webvisor:true\n   });\n</script>\n<noscript><div><img src=\"https://mc.yandex.ru/watch/{{ID YM}}\" style=\"position:absolute; left:-9999px;\" alt=\"\" /></div></noscript>\n<!-- /Yandex.Metrika counter -->"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1681030811897",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "tagId": "89",
+                "name": "Телеграм - Клик по мессенджеру",
+                "type": "img",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useCacheBuster",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "url",
+                        "value": "https://script.google.com/macros/s/{{ID ULA App}}/exec?bid={{ID ULA Lead Bot}}&type=chat&click_phone={{Click URL}}{{title_st}}&current_page={{Page Hostname}}{{Page Path}}&utm_source={{sbjs.get.current.src}}&utm_medium={{sbjs.get.current.mdm}}&utm_campaign={{sbjs.get.current.cmp}}&utm_content={{sbjs.get.current.cnt}}&utm_term={{sbjs.get.current.trm}}&udata_vst={{sbjs.get.udata.vst}}&utm_first={{sbjs.get.first.src}}-{{sbjs.get.first.mdm}}&first_date={{sbjs.get.current_add.fd}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "cacheBusterQueryParam",
+                        "value": "gtmcb"
+                    }
+                ],
+                "fingerprint": "1681030811892",
+                "firingTriggerId": [
+                    "69"
+                ],
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "tagId": "90",
+                "name": "HTML - RPLC - Email",
+                "type": "html",
+                "notes": "Действие: подмена всех email.",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  var email = '{{RPLC – Email}}';\n  \n  function emain() {\n    if (email == '-1') { return -1; }\n\n    if (email == '0') {\n      email = \"info@\" + window.location.hostname;\n    }\n\n    fnr(eregex, email);\n\n    var ems = document.querySelectorAll('a[href^=\"mailto:\"]');\n    for (i = 0; i < ems.length; ++i) {\n      ems[i].href = 'mailto:' + email;\n    }\n  }\n\n  emain();\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1681030811897",
+                "firingTriggerId": [
+                    "10"
+                ],
+                "parentFolderId": "7",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "tagId": "92",
+                "name": "F000 - YM Debug - Store",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  document.cookie = 'ck_ym_debug=1; max-age=5184000';\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1681030811897",
+                "firingTriggerId": [
+                    "82",
+                    "76",
+                    "42",
+                    "39",
+                    "91",
+                    "83"
+                ],
+                "parentFolderId": "8",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "tagId": "93",
+                "name": "Yandex Metrika - Клик по номеру телефона",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  ym({{ID YM}},'reachGoal','clickPhone');\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1681030811898",
+                "firingTriggerId": [
+                    "63"
+                ],
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "tagId": "94",
+                "name": "HTML - Sourcebuster",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n!function(e){if(\"object\"==typeof exports&&\"undefined\"!=typeof module)module.exports=e();else if(\"function\"==typeof define&&define.amd)define([],e);else{var f;\"undefined\"!=typeof window?f=window:\"undefined\"!=typeof global?f=global:\"undefined\"!=typeof self&&(f=self),f.sbjs=e()}}(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require==\"function\"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error(\"Cannot find module '\"+o+\"'\");throw f.code=\"MODULE_NOT_FOUND\",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require==\"function\"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(_dereq_,module,exports){\n\"use strict\";\n\nvar init = _dereq_('./init');\n\nvar sbjs = {\n  init: function(prefs) {\n    this.get = init(prefs);\n    if (prefs && prefs.callback && typeof prefs.callback === 'function') {\n      prefs.callback(this.get);\n    }\n  }\n};\n\nmodule.exports = sbjs;\n},{\"./init\":6}],2:[function(_dereq_,module,exports){\n\"use strict\";\n\nvar terms = _dereq_('./terms'),\n    utils = _dereq_('./helpers/utils');\n\nvar data = {\n\n  containers: {\n    current:          'sbjs_current',\n    current_extra:    'sbjs_current_add',\n    first:            'sbjs_first',\n    first_extra:      'sbjs_first_add',\n    session:          'sbjs_session',\n    udata:            'sbjs_udata',\n    promocode:        'sbjs_promo'\n  },\n\n  service: {\n    migrations:       'sbjs_migrations'\n  },\n\n  delimiter:          '|||',\n\n  aliases: {\n\n    main: {\n      type:           'typ',\n      source:         'src',\n      medium:         'mdm',\n      campaign:       'cmp',\n      content:        'cnt',\n      term:           'trm'\n    },\n\n    extra: {\n      fire_date:      'fd',\n      entrance_point: 'ep',\n      referer:        'rf'\n    },\n\n    session: {\n      pages_seen:     'pgs',\n      current_page:   'cpg'\n    },\n\n    udata: {\n      visits:         'vst',\n      ip:             'uip',\n      agent:          'uag'\n    },\n\n    promo:            'code'\n\n  },\n\n  pack: {\n\n    main: function(sbjs) {\n      return (\n        data.aliases.main.type      + '=' + sbjs.type     + data.delimiter +\n        data.aliases.main.source    + '=' + sbjs.source   + data.delimiter +\n        data.aliases.main.medium    + '=' + sbjs.medium   + data.delimiter +\n        data.aliases.main.campaign  + '=' + sbjs.campaign + data.delimiter +\n        data.aliases.main.content   + '=' + sbjs.content  + data.delimiter +\n        data.aliases.main.term      + '=' + sbjs.term\n      );\n    },\n\n    extra: function(timezone_offset) {\n      return (\n        data.aliases.extra.fire_date      + '=' + utils.setDate(new Date, timezone_offset) + data.delimiter +\n        data.aliases.extra.entrance_point + '=' + document.location.href                   + data.delimiter +\n        data.aliases.extra.referer        + '=' + (document.referrer || terms.none)\n      );\n    },\n\n    user: function(visits, user_ip) {\n      return (\n        data.aliases.udata.visits + '=' + visits  + data.delimiter +\n        data.aliases.udata.ip     + '=' + user_ip + data.delimiter +\n        data.aliases.udata.agent  + '=' + navigator.userAgent\n      );\n    },\n\n    session: function(pages) {\n      return (\n      data.aliases.session.pages_seen   + '=' + pages + data.delimiter +\n      data.aliases.session.current_page + '=' + document.location.href\n      );\n    },\n\n    promo: function(promo) {\n      return (\n        data.aliases.promo + '=' + utils.setLeadingZeroToInt(utils.randomInt(promo.min, promo.max), promo.max.toString().length)\n      );\n    }\n\n  }\n};\n\nmodule.exports = data;\n},{\"./helpers/utils\":5,\"./terms\":9}],3:[function(_dereq_,module,exports){\n\"use strict\";\n\nvar delimiter = _dereq_('../data').delimiter;\n\nmodule.exports = {\n\n  encodeData: function(s) {\n    return encodeURIComponent(s).replace(/\\!/g, '%21')\n                                .replace(/\\~/g, '%7E')\n                                .replace(/\\*/g, '%2A')\n                                .replace(/\\'/g, '%27')\n                                .replace(/\\(/g, '%28')\n                                .replace(/\\)/g, '%29');\n  },\n\n  decodeData: function(s) {\n    try {\n      return decodeURIComponent(s).replace(/\\%21/g, '!')\n                                  .replace(/\\%7E/g, '~')\n                                  .replace(/\\%2A/g, '*')\n                                  .replace(/\\%27/g, \"'\")\n                                  .replace(/\\%28/g, '(')\n                                  .replace(/\\%29/g, ')');\n    } catch(err1) {\n      // try unescape for backward compatibility\n      try { return unescape(s); } catch(err2) { return ''; }\n    }\n  },\n\n  set: function(name, value, minutes, domain, excl_subdomains) {\n    var expires, basehost;\n\n    if (minutes) {\n      var date = new Date();\n      date.setTime(date.getTime() + (minutes * 60 * 1000));\n      expires = '; expires=' + date.toGMTString();\n    } else {\n      expires = '';\n    }\n    if (domain && !excl_subdomains) {\n      basehost = ';domain=.' + domain;\n    } else {\n      basehost = '';\n    }\n    document.cookie = this.encodeData(name) + '=' + this.encodeData(value) + expires + basehost + '; path=/';\n  },\n\n  get: function(name) {\n    var nameEQ = this.encodeData(name) + '=',\n        ca = document.cookie.split(';');\n\n    for (var i = 0; i < ca.length; i++) {\n      var c = ca[i];\n      while (c.charAt(0) === ' ') { c = c.substring(1, c.length); }\n      if (c.indexOf(nameEQ) === 0) {\n        return this.decodeData(c.substring(nameEQ.length, c.length));\n      }\n    }\n    return null;\n  },\n\n  destroy: function(name, domain, excl_subdomains) {\n    this.set(name, '', -1, domain, excl_subdomains);\n  },\n\n  parse: function(yummy) {\n\n    var cookies = [],\n        data    = {};\n\n    if (typeof yummy === 'string') {\n      cookies.push(yummy);\n    } else {\n      for (var prop in yummy) {\n        if (yummy.hasOwnProperty(prop)) {\n          cookies.push(yummy[prop]);\n        }\n      }\n    }\n\n    for (var i1 = 0; i1 < cookies.length; i1++) {\n      var cookie_array;\n      data[this.unsbjs(cookies[i1])] = {};\n      if (this.get(cookies[i1])) {\n        cookie_array = this.get(cookies[i1]).split(delimiter);\n      } else {\n        cookie_array = [];\n      }\n      for (var i2 = 0; i2 < cookie_array.length; i2++) {\n        var tmp_array = cookie_array[i2].split('='),\n            result_array = tmp_array.splice(0, 1);\n        result_array.push(tmp_array.join('='));\n        data[this.unsbjs(cookies[i1])][result_array[0]] = this.decodeData(result_array[1]);\n      }\n    }\n\n    return data;\n\n  },\n\n  unsbjs: function (string) {\n    return string.replace('sbjs_', '');\n  }\n\n};\n\n},{\"../data\":2}],4:[function(_dereq_,module,exports){\n\"use strict\";\n\nmodule.exports = {\n\n  parse: function(str) {\n    var o = this.parseOptions,\n        m = o.parser[o.strictMode ? 'strict' : 'loose'].exec(str),\n        uri = {},\n        i = 14;\n\n    while (i--) { uri[o.key[i]] = m[i] || ''; }\n\n    uri[o.q.name] = {};\n    uri[o.key[12]].replace(o.q.parser, function ($0, $1, $2) {\n      if ($1) { uri[o.q.name][$1] = $2; }\n    });\n\n    return uri;\n  },\n\n  parseOptions: {\n    strictMode: false,\n    key: ['source','protocol','authority','userInfo','user','password','host','port','relative','path','directory','file','query','anchor'],\n    q: {\n      name:   'queryKey',\n      parser: /(?:^|&)([^&=]*)=?([^&]*)/g\n    },\n    parser: {\n      strict: /^(?:([^:\\/?#]+):)?(?:\\/\\/((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\\/?#]*)(?::(\\d*))?))?((((?:[^?#\\/]*\\/)*)([^?#]*))(?:\\?([^#]*))?(?:#(.*))?)/,\n      loose:  /^(?:(?![^:@]+:[^:@\\/]*@)([^:\\/?#.]+):)?(?:\\/\\/)?((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\\/?#]*)(?::(\\d*))?)(((\\/(?:[^?#](?![^?#\\/]*\\.[^?#\\/.]+(?:[?#]|$)))*\\/?)?([^?#\\/]*))(?:\\?([^#]*))?(?:#(.*))?)/\n    }\n  },\n\n  getParam: function(custom_params) {\n    var query_string = {},\n        query = custom_params ? custom_params : window.location.search.substring(1),\n        vars = query.split('&');\n\n    for (var i = 0; i < vars.length; i++) {\n      var pair = vars[i].split('=');\n      if (typeof query_string[pair[0]] === 'undefined') {\n        query_string[pair[0]] = pair[1];\n      } else if (typeof query_string[pair[0]] === 'string') {\n        var arr = [ query_string[pair[0]], pair[1] ];\n        query_string[pair[0]] = arr;\n      } else {\n        query_string[pair[0]].push(pair[1]);\n      }\n    }\n    return query_string;\n  },\n\n  getHost: function(request) {\n    return this.parse(request).host.replace('www.', '');\n  }\n\n};\n},{}],5:[function(_dereq_,module,exports){\n\"use strict\";\n\nmodule.exports = {\n\n  escapeRegexp: function(string) {\n    return string.replace(/[\\-\\[\\]\\/\\{\\}\\(\\)\\*\\+\\?\\.\\\\\\^\\$\\|]/g, \"\\\\$&\");\n  },\n\n  setDate: function(date, offset) {\n    var utc_offset    = date.getTimezoneOffset() / 60,\n        now_hours     = date.getHours(),\n        custom_offset = offset || offset === 0 ? offset : -utc_offset;\n\n    date.setHours(now_hours + utc_offset + custom_offset);\n\n    var year    = date.getFullYear(),\n        month   = this.setLeadingZeroToInt(date.getMonth() + 1,   2),\n        day     = this.setLeadingZeroToInt(date.getDate(),        2),\n        hour    = this.setLeadingZeroToInt(date.getHours(),       2),\n        minute  = this.setLeadingZeroToInt(date.getMinutes(),     2),\n        second  = this.setLeadingZeroToInt(date.getSeconds(),     2);\n\n    return (year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second);\n  },\n\n  setLeadingZeroToInt: function(num, size) {\n    var s = num + '';\n    while (s.length < size) { s = '0' + s; }\n    return s;\n  },\n\n  randomInt: function(min, max) {\n    return Math.floor(Math.random() * (max - min + 1)) + min;\n  }\n\n};\n\n},{}],6:[function(_dereq_,module,exports){\n\"use strict\";\n\nvar data        = _dereq_('./data'),\n    terms       = _dereq_('./terms'),\n    cookies     = _dereq_('./helpers/cookies'),\n    uri         = _dereq_('./helpers/uri'),\n    utils       = _dereq_('./helpers/utils'),\n    params      = _dereq_('./params'),\n    migrations  = _dereq_('./migrations');\n\nmodule.exports = function(prefs) {\n\n  var p         = params.fetch(prefs);\n  var get_param = uri.getParam();\n  var domain    = p.domain.host,\n      isolate   = p.domain.isolate,\n      lifetime  = p.lifetime;\n\n  migrations.go(lifetime, domain, isolate);\n\n  var __sbjs_type,\n      __sbjs_source,\n      __sbjs_medium,\n      __sbjs_campaign,\n      __sbjs_content,\n      __sbjs_term;\n\n  function mainData() {\n    var sbjs_data;\n    if (\n        typeof get_param.utm_source        !== 'undefined' ||\n        typeof get_param.utm_medium        !== 'undefined' ||\n        typeof get_param.utm_campaign      !== 'undefined' ||\n        typeof get_param.utm_content       !== 'undefined' ||\n        typeof get_param.utm_term          !== 'undefined' ||\n        typeof get_param.gclid             !== 'undefined' ||\n        typeof get_param.yclid             !== 'undefined' ||\n        typeof get_param[p.campaign_param] !== 'undefined' ||\n        typeof get_param[p.term_param]     !== 'undefined' ||\n        typeof get_param[p.content_param]  !== 'undefined'\n    ) {\n      setFirstAndCurrentExtraData();\n      sbjs_data = getData(terms.traffic.utm);\n    } else if (checkReferer(terms.traffic.organic)) {\n      setFirstAndCurrentExtraData();\n      sbjs_data = getData(terms.traffic.organic);\n    } else if (!cookies.get(data.containers.session) && checkReferer(terms.traffic.referral)) {\n      setFirstAndCurrentExtraData();\n      sbjs_data = getData(terms.traffic.referral);\n    } else if (!cookies.get(data.containers.first) && !cookies.get(data.containers.current)) {\n      setFirstAndCurrentExtraData();\n      sbjs_data = getData(terms.traffic.typein);\n    } else {\n      return cookies.get(data.containers.current);\n    }\n\n    return sbjs_data;\n  }\n\n  function getData(type) {\n\n    switch (type) {\n\n      case terms.traffic.utm:\n\n        __sbjs_type = terms.traffic.utm;\n\n        if (typeof get_param.utm_source !== 'undefined') {\n          __sbjs_source = get_param.utm_source;\n        } else if (typeof get_param.gclid !== 'undefined') {\n          __sbjs_source = 'google';\n        } else if (typeof get_param.yclid !== 'undefined') {\n          __sbjs_source = 'yandex';  \n        } else {\n          __sbjs_source = terms.none;\n        }\n\n        if (typeof get_param.utm_medium !== 'undefined') {\n          __sbjs_medium = get_param.utm_medium;\n        } else if (typeof get_param.gclid !== 'undefined') {\n          __sbjs_medium = 'cpc';\n        } else if (typeof get_param.yclid !== 'undefined') {\n          __sbjs_medium = 'cpc';  \n        } else {\n          __sbjs_medium = terms.none;\n        }\n\n        if (typeof get_param.utm_campaign !== 'undefined') {\n          __sbjs_campaign = get_param.utm_campaign;\n        } else if (typeof get_param[p.campaign_param] !== 'undefined') {\n          __sbjs_campaign = get_param[p.campaign_param];\n        } else if (typeof get_param.gclid !== 'undefined') {\n          __sbjs_campaign = 'google_cpc';\n        } else if (typeof get_param.yclid !== 'undefined') {\n          __sbjs_campaign = 'yandex_cpc';  \n        } else {\n          __sbjs_campaign = terms.none;\n        }\n\n        if (typeof get_param.utm_content !== 'undefined') {\n          __sbjs_content = get_param.utm_content;\n        } else if (typeof get_param[p.content_param] !== 'undefined') {\n          __sbjs_content = get_param[p.content_param];\n        } else {\n          __sbjs_content = terms.none;\n        }\n\n        if (typeof get_param.utm_term !== 'undefined') {\n          __sbjs_term = get_param.utm_term;\n        } else if (typeof get_param[p.term_param] !== 'undefined') {\n          __sbjs_term = get_param[p.term_param];\n        } else {\n          __sbjs_term = getUtmTerm() || terms.none;\n        }\n\n        break;\n\n      case terms.traffic.organic:\n        __sbjs_type     = terms.traffic.organic;\n        __sbjs_source   = __sbjs_source || uri.getHost(document.referrer);\n        __sbjs_medium   = terms.referer.organic;\n        __sbjs_campaign = terms.none;\n        __sbjs_content  = terms.none;\n        __sbjs_term     = terms.none;\n        break;\n\n      case terms.traffic.referral:\n        __sbjs_type     = terms.traffic.referral;\n        __sbjs_source   = __sbjs_source || uri.getHost(document.referrer);\n        __sbjs_medium   = __sbjs_medium || terms.referer.referral;\n        __sbjs_campaign = terms.none;\n        __sbjs_content  = uri.parse(document.referrer).path;\n        __sbjs_term     = terms.none;\n        break;\n\n      case terms.traffic.typein:\n        __sbjs_type     = terms.traffic.typein;\n        __sbjs_source   = p.typein_attributes.source;\n        __sbjs_medium   = p.typein_attributes.medium;\n        __sbjs_campaign = terms.none;\n        __sbjs_content  = terms.none;\n        __sbjs_term     = terms.none;\n        break;\n\n      default:\n        __sbjs_type     = terms.oops;\n        __sbjs_source   = terms.oops;\n        __sbjs_medium   = terms.oops;\n        __sbjs_campaign = terms.oops;\n        __sbjs_content  = terms.oops;\n        __sbjs_term     = terms.oops;\n    }\n    var sbjs_data = {\n      type:             __sbjs_type,\n      source:           __sbjs_source,\n      medium:           __sbjs_medium,\n      campaign:         __sbjs_campaign,\n      content:          __sbjs_content,\n      term:             __sbjs_term\n    };\n\n    return data.pack.main(sbjs_data);\n\n  }\n\n  function getUtmTerm() {\n    var referer = document.referrer;\n    if (get_param.utm_term) {\n      return get_param.utm_term;\n    } else if (referer && uri.parse(referer).host && uri.parse(referer).host.match(/^(?:.*\\.)?yandex\\..{2,9}$/i)) {\n      try {\n        return uri.getParam(uri.parse(document.referrer).query).text;\n      } catch (err) {\n        return false;\n      }\n    } else {\n      return false;\n    }\n  }\n\n  function checkReferer(type) {\n    var referer = document.referrer;\n    switch(type) {\n      case terms.traffic.organic:\n        return (!!referer && checkRefererHost(referer) && isOrganic(referer));\n      case terms.traffic.referral:\n        return (!!referer && checkRefererHost(referer) && isReferral(referer));\n      default:\n        return false;\n    }\n  }\n\n  function checkRefererHost(referer) {\n    if (p.domain) {\n      if (!isolate) {\n        var host_regex = new RegExp('^(?:.*\\\\.)?' + utils.escapeRegexp(domain) + '$', 'i');\n        return !(uri.getHost(referer).match(host_regex));\n      } else {\n        return (uri.getHost(referer) !== uri.getHost(domain));\n      }\n    } else {\n      return (uri.getHost(referer) !== uri.getHost(document.location.href));\n    }\n  }\n\n  function isOrganic(referer) {\n\n    var y_host  = 'yandex',\n        y_param = 'text',\n        g_host  = 'google';\n\n    var y_host_regex  = new RegExp('^(?:.*\\\\.)?'  + utils.escapeRegexp(y_host)  + '\\\\..{2,9}$'),\n        y_param_regex = new RegExp('.*'           + utils.escapeRegexp(y_param) + '=.*'),\n        g_host_regex  = new RegExp('^(?:www\\\\.)?' + utils.escapeRegexp(g_host)  + '\\\\..{2,9}$');\n\n    if (\n        !!uri.parse(referer).query &&\n        !!uri.parse(referer).host.match(y_host_regex) &&\n        !!uri.parse(referer).query.match(y_param_regex)\n      ) {\n      __sbjs_source = y_host;\n      return true;\n    } else if (!!uri.parse(referer).host.match(g_host_regex)) {\n      __sbjs_source = g_host;\n      return true;\n    } else if (!!uri.parse(referer).query) {\n      for (var i = 0; i < p.organics.length; i++) {\n        if (\n            uri.parse(referer).host.match(new RegExp('^(?:.*\\\\.)?' + utils.escapeRegexp(p.organics[i].host)  + '$', 'i')) &&\n            uri.parse(referer).query.match(new RegExp('.*'         + utils.escapeRegexp(p.organics[i].param) + '=.*', 'i'))\n          ) {\n          __sbjs_source = p.organics[i].display || p.organics[i].host;\n          return true;\n        }\n        if (i + 1 === p.organics.length) {\n          return false;\n        }\n      }\n    } else {\n      return false;\n    }\n  }\n\n  function isReferral(referer) {\n    if (p.referrals.length > 0) {\n      for (var i = 0; i < p.referrals.length; i++) {\n        if (uri.parse(referer).host.match(new RegExp('^(?:.*\\\\.)?' + utils.escapeRegexp(p.referrals[i].host) + '$', 'i'))) {\n          __sbjs_source = p.referrals[i].display  || p.referrals[i].host;\n          __sbjs_medium = p.referrals[i].medium   || terms.referer.referral;\n          return true;\n        }\n        if (i + 1 === p.referrals.length) {\n          __sbjs_source = uri.getHost(referer);\n          return true;\n        }\n      }\n    } else {\n      __sbjs_source = uri.getHost(referer);\n      return true;\n    }\n  }\n\n  function setFirstAndCurrentExtraData() {\n    cookies.set(data.containers.current_extra, data.pack.extra(p.timezone_offset), lifetime, domain, isolate);\n    if (!cookies.get(data.containers.first_extra)) {\n      cookies.set(data.containers.first_extra, data.pack.extra(p.timezone_offset), lifetime, domain, isolate);\n    }\n  }\n\n  (function setData() {\n\n    // Main data\n    cookies.set(data.containers.current, mainData(), lifetime, domain, isolate);\n    if (!cookies.get(data.containers.first)) {\n      cookies.set(data.containers.first, cookies.get(data.containers.current), lifetime, domain, isolate);\n    }\n\n    // User data\n    var visits, udata;\n    if (!cookies.get(data.containers.udata)) {\n      visits  = 1;\n      udata   = data.pack.user(visits, p.user_ip);\n    } else {\n      visits  = parseInt(cookies.parse(data.containers.udata)[cookies.unsbjs(data.containers.udata)][data.aliases.udata.visits]) || 1;\n      visits  = cookies.get(data.containers.session) ? visits : visits + 1;\n      udata   = data.pack.user(visits, p.user_ip);\n    }\n    cookies.set(data.containers.udata, udata, lifetime, domain, isolate);\n\n    // Session\n    var pages_count;\n    if (!cookies.get(data.containers.session)) {\n      pages_count = 1;\n    } else {\n      pages_count = parseInt(cookies.parse(data.containers.session)[cookies.unsbjs(data.containers.session)][data.aliases.session.pages_seen]) || 1;\n      pages_count += 1;\n    }\n    cookies.set(data.containers.session, data.pack.session(pages_count), p.session_length, domain, isolate);\n\n    // Promocode\n    if (p.promocode && !cookies.get(data.containers.promocode)) {\n      cookies.set(data.containers.promocode, data.pack.promo(p.promocode), lifetime, domain, isolate);\n    }\n\n  })();\n\n  return cookies.parse(data.containers);\n\n};\n},{\"./data\":2,\"./helpers/cookies\":3,\"./helpers/uri\":4,\"./helpers/utils\":5,\"./migrations\":7,\"./params\":8,\"./terms\":9}],7:[function(_dereq_,module,exports){\n\"use strict\";\n\nvar data    = _dereq_('./data'),\n    cookies = _dereq_('./helpers/cookies');\n\nmodule.exports = {\n\n  go: function(lifetime, domain, isolate) {\n\n    var migrate = this.migrations,\n        _with   = { l: lifetime, d: domain, i: isolate };\n\n    var i;\n\n    if (!cookies.get(data.containers.first) && !cookies.get(data.service.migrations)) {\n\n      var mids = [];\n      for (i = 0; i < migrate.length; i++) { mids.push(migrate[i].id); }\n\n      var advance = '';\n      for (i = 0; i < mids.length; i++) {\n        advance += mids[i] + '=1';\n        if (i < mids.length - 1) { advance += data.delimiter; }\n      }\n      cookies.set(data.service.migrations, advance, _with.l, _with.d, _with.i);\n\n    } else if (!cookies.get(data.service.migrations)) {\n\n      // We have only one migration for now, so just\n      for (i = 0; i < migrate.length; i++) {\n        migrate[i].go(migrate[i].id, _with);\n      }\n\n    }\n\n  },\n\n  migrations: [\n\n    {\n      id: '1418474375998',\n      version: '1.0.0-beta',\n      go: function(mid, _with) {\n\n        var success = mid + '=1',\n            fail    = mid + '=0';\n\n        var safeReplace = function($0, $1, $2) {\n          return ($1 || $2 ? $0 : data.delimiter);\n        };\n\n        try {\n\n          // Switch delimiter and renew cookies\n          var _in = [];\n          for (var prop in data.containers) {\n            if (data.containers.hasOwnProperty(prop)) {\n              _in.push(data.containers[prop]);\n            }\n          }\n\n          for (var i = 0; i < _in.length; i++) {\n            if (cookies.get(_in[i])) {\n              var buffer = cookies.get(_in[i]).replace(/(\\|)?\\|(\\|)?/g, safeReplace);\n              cookies.destroy(_in[i], _with.d, _with.i);\n              cookies.destroy(_in[i], _with.d, !_with.i);\n              cookies.set(_in[i], buffer, _with.l, _with.d, _with.i);\n            }\n          }\n\n          // Update `session`\n          if (cookies.get(data.containers.session)) {\n            cookies.set(data.containers.session, data.pack.session(0), _with.l, _with.d, _with.i);\n          }\n\n          // Yay!\n          cookies.set(data.service.migrations, success, _with.l, _with.d, _with.i);\n\n        } catch (err) {\n          // Oops\n          cookies.set(data.service.migrations, fail, _with.l, _with.d, _with.i);\n        }\n      }\n    }\n\n  ]\n\n};\n},{\"./data\":2,\"./helpers/cookies\":3}],8:[function(_dereq_,module,exports){\n\"use strict\";\n\nvar terms = _dereq_('./terms'),\n    uri   = _dereq_('./helpers/uri');\n\nmodule.exports = {\n\n  fetch: function(prefs) {\n\n    var user   = prefs || {},\n        params = {};\n\n    // Set `lifetime of the cookie` in months\n    params.lifetime = this.validate.checkFloat(user.lifetime) || 6;\n    params.lifetime = parseInt(params.lifetime * 30 * 24 * 60);\n\n    // Set `session length` in minutes\n    params.session_length = this.validate.checkInt(user.session_length) || 30;\n\n    // Set `timezone offset` in hours\n    params.timezone_offset = this.validate.checkInt(user.timezone_offset);\n\n    // Set `campaign param` for AdWords links\n    params.campaign_param = user.campaign_param || false;\n\n    // Set `term param` and `content param` for AdWords links\n    params.term_param = user.term_param || false;\n    params.content_param = user.content_param || false;\n\n    // Set `user ip`\n    params.user_ip = user.user_ip || terms.none;\n\n    // Set `promocode`\n    if (user.promocode) {\n      params.promocode = {};\n      params.promocode.min = parseInt(user.promocode.min) || 100000;\n      params.promocode.max = parseInt(user.promocode.max) || 999999;\n    } else {\n      params.promocode = false;\n    }\n\n    // Set `typein attributes`\n    if (user.typein_attributes && user.typein_attributes.source && user.typein_attributes.medium) {\n      params.typein_attributes = {};\n      params.typein_attributes.source = user.typein_attributes.source;\n      params.typein_attributes.medium = user.typein_attributes.medium;\n    } else {\n      params.typein_attributes = { source: '(direct)', medium: '(none)' };\n    }\n\n    // Set `domain`\n    if (user.domain && this.validate.isString(user.domain)) {\n      params.domain = { host: user.domain, isolate: false };\n    } else if (user.domain && user.domain.host) {\n      params.domain = user.domain;\n    } else {\n      params.domain = { host: uri.getHost(document.location.hostname), isolate: false };\n    }\n\n    // Set `referral sources`\n    params.referrals = [];\n\n    if (user.referrals && user.referrals.length > 0) {\n      for (var ir = 0; ir < user.referrals.length; ir++) {\n        if (user.referrals[ir].host) {\n          params.referrals.push(user.referrals[ir]);\n        }\n      }\n    }\n\n    // Set `organic sources`\n    params.organics = [];\n\n    if (user.organics && user.organics.length > 0) {\n      for (var io = 0; io < user.organics.length; io++) {\n        if (user.organics[io].host && user.organics[io].param) {\n          params.organics.push(user.organics[io]);\n        }\n      }\n    }\n\n    params.organics.push({ host: 'bing.com',      param: 'q',     display: 'bing'            });\n    params.organics.push({ host: 'yahoo.com',     param: 'p',     display: 'yahoo'           });\n    params.organics.push({ host: 'about.com',     param: 'q',     display: 'about'           });\n    params.organics.push({ host: 'aol.com',       param: 'q',     display: 'aol'             });\n    params.organics.push({ host: 'ask.com',       param: 'q',     display: 'ask'             });\n    params.organics.push({ host: 'globososo.com', param: 'q',     display: 'globo'           });\n    params.organics.push({ host: 'go.mail.ru',    param: 'q',     display: 'go.mail.ru'      });\n    params.organics.push({ host: 'rambler.ru',    param: 'query', display: 'rambler'         });\n    params.organics.push({ host: 'tut.by',        param: 'query', display: 'tut.by'          });\n\n    params.referrals.push({ host: 't.co',                         display: 'twitter.com'     });\n    params.referrals.push({ host: 'plus.url.google.com',          display: 'plus.google.com' });\n\n\n    return params;\n\n  },\n\n  validate: {\n\n    checkFloat: function(v) {\n      return v && this.isNumeric(parseFloat(v)) ? parseFloat(v) : false;\n    },\n\n    checkInt: function(v) {\n      return v && this.isNumeric(parseInt(v)) ? parseInt(v) : false;\n    },\n\n    isNumeric: function(v){\n      return !isNaN(v);\n    },\n\n    isString: function(v) {\n      return Object.prototype.toString.call(v) === '[object String]';\n    }\n\n  }\n\n};\n},{\"./helpers/uri\":4,\"./terms\":9}],9:[function(_dereq_,module,exports){\n\"use strict\";\n\nmodule.exports = {\n\n  traffic: {\n    utm:        'utm',\n    organic:    'organic',\n    referral:   'referral',\n    typein:     'typein'\n  },\n\n  referer: {\n    referral:   'referral',\n    organic:    'organic',\n    social:     'social'\n  },\n\n  none:         '(none)',\n  oops:         '(Houston, we have a problem)'\n\n};\n\n},{}]},{},[1])(1)\n});\nsbjs.init();\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1681030811898",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "parentFolderId": "17",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "triggerId": "5",
+                "name": "submit_form",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "order_done"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1681030826380",
+                "parentFolderId": "3"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "triggerId": "10",
+                "name": "Dom Ready for Mod",
+                "type": "DOM_READY",
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{F000 - YM Debug Cookie}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "1"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1681030811807",
+                "parentFolderId": "3"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "triggerId": "39",
+                "name": "F000 - Переход из толоки Src",
+                "type": "WINDOW_LOADED",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{sbjs.get.current.src}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "iframe-toloka.com"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1681030811815",
+                "parentFolderId": "8"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "triggerId": "41",
+                "name": "Скролл 75",
+                "type": "SCROLL_DEPTH",
+                "fingerprint": "1681030811815",
+                "parentFolderId": "3",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "verticalThresholdUnits",
+                        "value": "PERCENT"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "verticalThresholdsPercent",
+                        "value": "75"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "verticalThresholdOn",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "triggerStartOption",
+                        "value": "WINDOW_LOAD"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "horizontalThresholdOn",
+                        "value": "false"
+                    }
+                ]
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "triggerId": "42",
+                "name": "F000 - Переход из толоки Ref",
+                "type": "PAGEVIEW",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Referrer}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "iframe-toloka.com"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1681030811815",
+                "parentFolderId": "8"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "triggerId": "44",
+                "name": "Клик по email",
+                "type": "LINK_CLICK",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "mailto:"
+                            }
+                        ]
+                    }
+                ],
+                "waitForTags": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "checkValidation": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "waitForTagsTimeout": {
+                    "type": "TEMPLATE",
+                    "value": "2000"
+                },
+                "uniqueTriggerId": {
+                    "type": "TEMPLATE"
+                },
+                "fingerprint": "1681030811816",
+                "parentFolderId": "3"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "triggerId": "54",
+                "name": "Копирование телефона – Правая кнопка",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "rightClickPhone"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "rightClickPhone"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1681030811819",
+                "parentFolderId": "3"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "triggerId": "55",
+                "name": "Копирование телефона – Клавиши",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "copyTextPhone"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "copyTextPhone"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1681030811819",
+                "parentFolderId": "3"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "triggerId": "57",
+                "name": "Копирование почты – Клавиши",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "copyText"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "copyText"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1681030811819",
+                "parentFolderId": "3"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "triggerId": "58",
+                "name": "Копирование почты – Правая кнопка",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "rightClick"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "rightClick"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1681030811886",
+                "parentFolderId": "3"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "triggerId": "61",
+                "name": "pageView",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "pageView"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1681030811887",
+                "parentFolderId": "3"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "triggerId": "63",
+                "name": "Клик по номеру телефона",
+                "type": "LINK_CLICK",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "tel:"
+                            }
+                        ]
+                    }
+                ],
+                "waitForTags": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "checkValidation": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "waitForTagsTimeout": {
+                    "type": "TEMPLATE",
+                    "value": "2000"
+                },
+                "uniqueTriggerId": {
+                    "type": "TEMPLATE"
+                },
+                "fingerprint": "1681030811887",
+                "parentFolderId": "3"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "triggerId": "69",
+                "name": "Клик по мессенджеру",
+                "type": "LINK_CLICK",
+                "filter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "\\/\\/yandex\\.ru\\/chat\\/|m\\.me|messenger\\.com|www\\.messenger\\.com|skype|t\\.me|tg:\\/\\/|telegram\\.me|tlgg\\.ru|tele\\.click|viber:\\/\\/|partners\\.viber\\.com\\/|wa\\.me|api\\.whatsapp\\.com|web\\.whatsapp\\.com|whatsapp:\\/\\/|vk\\.me|vk\\.com\\/im|vk:\\/\\/"
+                            }
+                        ]
+                    }
+                ],
+                "waitForTags": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "checkValidation": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "waitForTagsTimeout": {
+                    "type": "TEMPLATE",
+                    "value": "2000"
+                },
+                "uniqueTriggerId": {
+                    "type": "TEMPLATE"
+                },
+                "fingerprint": "1681030811888",
+                "parentFolderId": "3"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "triggerId": "76",
+                "name": "F000 - UTM с переменной Яндекс Директа",
+                "type": "WINDOW_LOADED",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{sbjs.get.current.cmp}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "{"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1681030811890",
+                "parentFolderId": "8"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "triggerId": "82",
+                "name": "F000 - PageURL with _ym_debug",
+                "type": "PAGEVIEW",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Page URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "_ym_debug"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1681030811891",
+                "parentFolderId": "8"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "triggerId": "83",
+                "name": "F000 - Переход из корп.сети Яндекса",
+                "type": "PAGEVIEW",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Referrer}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "yandex-team.ru"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1681030811891",
+                "parentFolderId": "8"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "triggerId": "91",
+                "name": "F000 - Переход из ЯД",
+                "type": "PAGEVIEW",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Referrer}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "direct.yandex.ru"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1681030811892",
+                "parentFolderId": "8"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "triggerId": "95",
+                "name": "All Clicks",
+                "type": "CLICK",
+                "fingerprint": "1681203827897"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "4",
+                "name": "Log State App",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "https://script.google.com/macros/s/AKfycbxmmndZib53e9-A81uqzG47eFsQ9hjJfbLzb--QI2vFH1Qp2coWz0BR4bslUQ5zbKoH/exec"
+                    }
+                ],
+                "fingerprint": "1681030811805",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "9",
+                "name": "F000 - YM Debug Cookie",
+                "type": "k",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decodeCookie",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "ck_ym_debug"
+                    }
+                ],
+                "fingerprint": "1681030811807",
+                "parentFolderId": "8",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "12",
+                "name": "RPLC – ИНН",
+                "type": "c",
+                "notes": "Возможные значения переменной:\n-1 – подмена выключена\n 0 – подмена на случайный номер (10 цифр)\nесли указан номер (10 или 12 цифр), то показывается он",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "-1"
+                    }
+                ],
+                "fingerprint": "1681030811807",
+                "parentFolderId": "11",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "14",
+                "name": "title",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "title"
+                    }
+                ],
+                "fingerprint": "1681030811808",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "15",
+                "name": "RPLC – Email",
+                "type": "c",
+                "notes": "Возможные значения переменной:\n-1 – подмена выключена\n 0 – подмена на info@site.ru\nесли указан email, то показывается он",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "-1"
+                    }
+                ],
+                "fingerprint": "1681030811808",
+                "parentFolderId": "11",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "16",
+                "name": "copyEmail",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "copy-email"
+                    }
+                ],
+                "fingerprint": "1681030811808",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "18",
+                "name": "sbjs.get.first.cmp",
+                "type": "j",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "sbjs.get.first.cmp"
+                    }
+                ],
+                "fingerprint": "1681030811809",
+                "parentFolderId": "17",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "19",
+                "name": "debug",
+                "type": "c",
+                "notes": "Режим отладки:\n1 - посылает сообщения в консоль\n0 – не посылает",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "0"
+                    }
+                ],
+                "fingerprint": "1681030811809",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "21",
+                "name": "sbjs.get.current.mdm",
+                "type": "j",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "sbjs.get.current.mdm"
+                    }
+                ],
+                "fingerprint": "1681030811809",
+                "parentFolderId": "17",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "23",
+                "name": "status",
+                "type": "c",
+                "notes": "Статус оффлайн конверсии по умолчанию.",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "IN_PROGRESS"
+                    }
+                ],
+                "fingerprint": "1681030811810",
+                "parentFolderId": "22",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "24",
+                "name": "event_state",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "event_state"
+                    }
+                ],
+                "fingerprint": "1681030811810",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "26",
+                "name": "event_state step",
+                "type": "c",
+                "notes": "Шаг срабатывания цели с идентификатором goal_name2.\n\nПо-умолчанию, значение равно 4, происходит каждое четвертое срабатывание цели.",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "4"
+                    }
+                ],
+                "fingerprint": "1681030811811",
+                "parentFolderId": "25",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "27",
+                "name": "event_state processed",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n  return {{event_state}}%{{event_state step}};\n}"
+                    }
+                ],
+                "fingerprint": "1681030811893",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "28",
+                "name": "sbjs.get.current.src",
+                "type": "j",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "sbjs.get.current.src"
+                    }
+                ],
+                "fingerprint": "1681030811811",
+                "parentFolderId": "17",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "29",
+                "name": "sbjs.get.current_add.rf",
+                "type": "j",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "sbjs.get.current_add.rf"
+                    }
+                ],
+                "fingerprint": "1681030811812",
+                "parentFolderId": "17",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "30",
+                "name": "ID YM",
+                "type": "c",
+                "notes": "Идентификатор счетчика Яндекс Метрики",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "00000000"
+                    }
+                ],
+                "fingerprint": "1681030811812",
+                "parentFolderId": "25",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "31",
+                "name": "sbjs.get.current.trm",
+                "type": "j",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "sbjs.get.current.trm"
+                    }
+                ],
+                "fingerprint": "1681030811812",
+                "parentFolderId": "17",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "32",
+                "name": "sbjs.get.current.cnt",
+                "type": "j",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "sbjs.get.current.cnt"
+                    }
+                ],
+                "fingerprint": "1681030811812",
+                "parentFolderId": "17",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "33",
+                "name": "sbjs.get.current.cmp",
+                "type": "j",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "sbjs.get.current.cmp"
+                    }
+                ],
+                "fingerprint": "1681030811813",
+                "parentFolderId": "17",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "34",
+                "name": "Client ID",
+                "type": "k",
+                "notes": "Client ID – идентификатор пользователя, нужен для работы сквозной аналитики.",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decodeCookie",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "_ym_uid"
+                    }
+                ],
+                "fingerprint": "1681030811813",
+                "parentFolderId": "22",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "36",
+                "name": "sbjs.get.first.trm",
+                "type": "j",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "sbjs.get.first.trm"
+                    }
+                ],
+                "fingerprint": "1681030811814",
+                "parentFolderId": "17",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "37",
+                "name": "pageView",
+                "type": "e",
+                "fingerprint": "1681030811814",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "40",
+                "name": "goal_name2",
+                "type": "c",
+                "notes": "Название РЦ2, срабатывает каждый N раз и при посещении модератором.\n\nЧастота срабатывания задается в переменной event_state step.",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "leadForm2"
+                    }
+                ],
+                "fingerprint": "1681030811815",
+                "parentFolderId": "25",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "45",
+                "name": "sbjs.get.first.src",
+                "type": "j",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "sbjs.get.first.src"
+                    }
+                ],
+                "fingerprint": "1681030811816",
+                "parentFolderId": "17",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "46",
+                "name": "sbjs.get.udata.vst",
+                "type": "j",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "sbjs.get.udata.vst"
+                    }
+                ],
+                "fingerprint": "1681030811816",
+                "parentFolderId": "17",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "47",
+                "name": "ID ULA Lead Bot",
+                "type": "c",
+                "notes": "Идентификатор чата в Телеграм, куда бот yacra_bot будет передавать уведомления о конверсиях на сайте.",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "-870987108"
+                    }
+                ],
+                "fingerprint": "1681030811817",
+                "parentFolderId": "25",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "48",
+                "name": "sbjs.get.first.mdm",
+                "type": "j",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "sbjs.get.first.mdm"
+                    }
+                ],
+                "fingerprint": "1681030811817",
+                "parentFolderId": "17",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "49",
+                "name": "title_st",
+                "type": "smm",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "input",
+                        "value": "{{F000 - YM Debug Cookie}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "defaultValue"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "map",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "1"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "|   Возможно модер!"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1681030811817",
+                "parentFolderId": "8",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "50",
+                "name": "ID ULA App",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "AKfycbxi7rqi-j_fH06IEzOKROLIHPiOHFv8wLeZn963lEElb8AmUzg-obnDJJ1wGNagMzmR"
+                    }
+                ],
+                "fingerprint": "1681030811817",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "51",
+                "name": "sbjs.get.current_add.fd",
+                "type": "j",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "sbjs.get.current_add.fd"
+                    }
+                ],
+                "fingerprint": "1681030811818",
+                "parentFolderId": "17",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "53",
+                "name": "copyPhone",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "copy-phone"
+                    }
+                ],
+                "fingerprint": "1681030811818",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "65",
+                "name": "RPLC – ОГРН",
+                "type": "c",
+                "notes": "Возможные значения переменной:\n-1 – подмена выключена\n 0 – подмена на случайный номер (13 цифр)\n– если указан номер (13 цифр), то показывается он",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "-1"
+                    }
+                ],
+                "fingerprint": "1681030811888",
+                "parentFolderId": "11",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "68",
+                "name": "sbjs.get.first.cnt",
+                "type": "j",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "sbjs.get.first.cnt"
+                    }
+                ],
+                "fingerprint": "1681030811888",
+                "parentFolderId": "17",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "71",
+                "name": "eventAction",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "eventAction"
+                    }
+                ],
+                "fingerprint": "1681030811889",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "72",
+                "name": "referer",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "referer"
+                    }
+                ],
+                "fingerprint": "1681030811889",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "74",
+                "name": "title_logst",
+                "type": "smm",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "input",
+                        "value": "{{event_state processed}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "defaultValue",
+                        "value": "| {{event_state processed}} / {{event_state step}}"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "map",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "0"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "|  $$$"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1681207760203",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "78",
+                "name": "RPLC – Код города",
+                "type": "c",
+                "notes": "Код города или сотового оператора (3 цифры).\n\nСлучайная генерация кода не предусмотрена.",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "958"
+                    }
+                ],
+                "fingerprint": "1681030811890",
+                "parentFolderId": "11",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "79",
+                "name": "RPLC – Номер телефона",
+                "type": "c",
+                "notes": "Возможные значения переменной:\n-1 – подмена выключена\n 0 – подмена на случайный номер\nесли указан номер (7 цифр), то показывается он",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "-1"
+                    }
+                ],
+                "fingerprint": "1681030811891",
+                "parentFolderId": "11",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "84",
+                "name": "goal_name",
+                "type": "c",
+                "notes": "Название РЦ, срабатывает всегда.",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "leadForm"
+                    }
+                ],
+                "fingerprint": "1681030811891",
+                "parentFolderId": "25",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "variableId": "86",
+                "name": "sheet_key",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "10vL_7_sEKYT_Q2o55cZE5Dj-V9T85MdrFgHZTvjGRvg"
+                    }
+                ],
+                "fingerprint": "1681030811892",
+                "parentFolderId": "22",
+                "formatValue": {}
+            }
+        ],
+        "folder": [
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "folderId": "3",
+                "name": "Основная папка",
+                "fingerprint": "1681030811804"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "folderId": "7",
+                "name": "RPLC",
+                "fingerprint": "1681030811806"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "folderId": "8",
+                "name": "F000",
+                "fingerprint": "1681030811806"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "folderId": "11",
+                "name": "! Подмена",
+                "fingerprint": "1681030811807"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "folderId": "17",
+                "name": "Source Buster",
+                "fingerprint": "1681030811809"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "folderId": "22",
+                "name": "Offline Conversions",
+                "fingerprint": "1681030811810"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "folderId": "25",
+                "name": "! Настройки",
+                "fingerprint": "1681030811811"
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "type": "REFERRER",
+                "name": "Referrer"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "type": "EVENT",
+                "name": "Event"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "type": "CLICK_ELEMENT",
+                "name": "Click Element"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "type": "CLICK_CLASSES",
+                "name": "Click Classes"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "type": "CLICK_ID",
+                "name": "Click ID"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "type": "CLICK_TARGET",
+                "name": "Click Target"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "type": "CLICK_URL",
+                "name": "Click URL"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "type": "CLICK_TEXT",
+                "name": "Click Text"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "type": "FORM_ELEMENT",
+                "name": "Form Element"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "type": "FORM_CLASSES",
+                "name": "Form Classes"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "type": "FORM_ID",
+                "name": "Form ID"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "type": "FORM_TARGET",
+                "name": "Form Target"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "type": "FORM_URL",
+                "name": "Form URL"
+            },
+            {
+                "accountId": "6083769437",
+                "containerId": "108385406",
+                "type": "FORM_TEXT",
+                "name": "Form Text"
+            }
+        ],
+        "fingerprint": "1681207966503",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6083769437/containers/108385406/versions/0?apiLink=version"
+    }
+}
